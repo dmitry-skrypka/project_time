@@ -1,0 +1,72 @@
+.profiles_container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.bold {
+  font-weight: bold;
+}
+.create_block_create_new {
+  display: flex;
+  flex-direction: row;
+}
+.create_profile_tab_content_section_wrapper {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.create_block_description {
+  color: #6c757d;
+  font-size: 0.928571rem;
+}
+
+.create_block_content {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile_card_container {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+}
+.create_profile_header {
+  padding-top: 20px;
+}
+.create_profile_tab1_container {
+  height: 250px;
+}
+.create_profile_tab_description {
+  text-align: center;
+  padding: 10px;
+}
+.profile_card_section {
+  display: flex;
+  flex-direction: column;
+}
+.ant-btn.create_profile_buttonOs {
+  width: 130px;
+  height: 90px;
+  text-align: center;
+  margin: 3px;
+}
+.ant-btn>.create_profile_os_icon_wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.create_profile_tab_content_section_os {
+  display: flex;
+}
+
+.create_profile_tab_content_section_protocol {
+
+  display: flex;
+  justify-content: space-around;
+}
+.create_profile_os_icon_description {
+
+}

@@ -1,0 +1,7 @@
+.header-container {
+  width: 50%;
+}
+.header-container .nav-menu {
+  color: #d3d7dc;
+  background-color: #343a40;
+}

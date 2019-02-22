@@ -1,0 +1,25 @@
+{
+    "extends": ["airbnb"],
+    "globals": {
+        "localStorage": true,
+        "history": true,
+        "document": true,
+        "window": true,
+        "FormData": true,
+        "Image": true,
+        "navigator": true
+    },
+    "rules": {
+        "no-debugger": "off",
+        "no-shadow": "off",
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "jsx-a11y/alt-text": [ 0, {
+            "elements": [ "img", "area", "input[type=\"image\"]" ],
+            "img": ["Image"],
+            "object": "off",
+            "area": ["Area"],
+            "input[type=\"image\"]": ["InputImage"]
+          }]
+     },
+    "parser": "babel-eslint"
+}
