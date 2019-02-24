@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import {
   createVpn, vpnNameChange, vpnOsChange, vpnSelectorChange,
 } from '../../actions/profilesActions';
-import handleOsIcons from '../helpers/osIcon';
+import handleOsIcons from '../../helpers/osIcon';
 import { getServers, getSubscriptions } from '../../actions/userActions';
 
 const PORT_DESCRIPTION = {

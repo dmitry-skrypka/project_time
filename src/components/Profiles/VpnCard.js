@@ -1,7 +1,7 @@
 import React from 'react';
 import { Icon, Select } from 'antd';
 import history from '../../config/history';
-import handleOsIcons from '../helpers/osIcon';
+import handleOsIcons from '../../helpers/osIcon';
 
 function VpnCard(props) {
   const Option = Select.Option;
