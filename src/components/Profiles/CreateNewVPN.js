@@ -8,7 +8,7 @@ import {
   createVpn, vpnNameChange, vpnOsChange, vpnSelectorChange,
 } from '../../actions/profilesActions';
 import handleOsIcons from '../helpers/osIcon';
-import { getSubscriptions } from '../../actions/userActions';
+import { getServers, getSubscriptions } from '../../actions/userActions';
 
 const PORT_DESCRIPTION = {
   8080: <span>
@@ -21,7 +21,7 @@ const PORT_DESCRIPTION = {
     protocol without TLS and with
     <span className="bold"> authorization</span>
 . Works well for mikrotik and other routers.
-  </span>,
+        </span>,
 
   433: <span>
     <span className="bold">433</span>
@@ -35,7 +35,7 @@ protocol, looks like
     <span className="bold"> HTTPS </span>
     {' '}
 traffic and excellent speed, but not some providers support.
-  </span>,
+       </span>,
   80: <span>
     <span className="bold">80</span>
     {' '}
@@ -48,7 +48,7 @@ protocol, looks like
     <span className="bold">HTTP</span>
     {' '}
 traffic, excellent for unlocking the Internet at airports and any Wi-Fi hotspots.
-  </span>,
+      </span>,
   53: <span>
     {' '}
     <span className="bold"> 53 </span>
@@ -61,7 +61,7 @@ protocol, looks like
     <span className="bold">DNS</span>
     {' '}
 traffic and excellent speed, but not some providers support.
-  </span>,
+      </span>,
 };
 
 
@@ -101,8 +101,9 @@ class CreateNewVPN extends React.Component {
   }
 
   componentDidMount() {
-    const { getSubscriptionList } = this.props;
+    const { getSubscriptionList, getServerList } = this.props;
     getSubscriptionList();
+    getServerList();
   }
 
   next() {
@@ -144,7 +145,11 @@ class CreateNewVPN extends React.Component {
       const {
         name, subscription, os, client, proto, port,
       } = this.props.vpn;
+
       const { subscriptions } = this.props.user;
+      const { servers } = this.props.user;
+      const actualServers = servers.slice(0, 3);
+      console.log(actualServers);
       switch (current) {
         case 0:
           return (
@@ -186,112 +191,133 @@ remaining]
           );
         case 1:
           return (
-                  <>
-                    <div className="create_profile_tab1_container">
-                      <div className="create_profile_tab_content_section">
-                        <div className="create_profile_tab_description">
-                          <div> Choose your operations system and press "Next"</div>
-                        </div>
-                      </div>
-                      <div className="create_profile_tab_content_section_os">
-                        <div className="create_profile_buttonOs_wrapper">
-                          {OS.map(o => (
-                            <Button
-                              htmlType="button"
-                              className="create_profile_buttonOs"
-                              name="os"
-                              key={o.description}
-                              type={os === o.value ? 'primary' : null}
-                              value={o.value}
-                              onClick={this.handleOsChange}
-                            >
-                              <span className="create_profile_os_icon_wrapper">
-                                <Icon
-                                  style={{ fontSize: 20 }}
-                                  component={handleOsIcons(o.value)}
-                                />
-                                <span className="create_profile_os_icon_description">{o.description}</span>
-                              </span>
-                            </Button>
-                          ))}
-                        </div>
-                        <div className="create_profile_selectedOs">
-                            OS Selected:
-                          {' '}
-                          {os}
-                        </div>
-                      </div>
-
-                    </div>
-                  </>);
-        case 2:
-          return (
-              <>
-                <div className="create_profile_tab1_container">
-                  <div className="create_profile_tab_content_section">
-                    <div> Select the protocol that you prefer and create profile.</div>
+            <>
+              <div className="create_profile_tab1_container">
+                <div className="create_profile_tab_content_section">
+                  <div className="create_profile_tab_description">
+                    <div> Choose your operations system and press "Next"</div>
                   </div>
-                  <div className="create_profile_tab_content_section_protocol">
-                    <div className="create_profile_selectors_wrapper">
-                      <div className="create_profile_selector_wrapper">
-                        <div>Protocol</div>
-                        <Select
-                          defaultValue={proto}
-                          style={{ width: 200 }}
-
-                          onChange={(e, name) => this.handleSelectorChange(e, name)}
-                        >
-                          <Option name="proto" value="ovpn">OpenVPN</Option>
-                          <Option name="proto" value="ikev">IKEv2</Option>
-                          <Option name="proto" value="l2tp">L2TP</Option>
-                          <Option name="proto" value="pptp">PPTP</Option>
-                        </Select>
-                      </div>
-                      {proto === 'ovpn' && (
-                          <>
-                            <div className="create_profile_selector_wrapper">
-                              <div>Client</div>
-                              <Select
-                                defaultValue={client}
-                                style={{ width: 200 }}
-
-                                onChange={(e, name) => this.handleSelectorChange(e, name)}
-                              >
-                                <Option name="client" value="ovpn">OpenVPN 2.3.4</Option>
-                                <Option name="client" value="tblick">TunnelBlick</Option>
-                              </Select>
-                            </div>
-
-                            <div className="create_profile_selector_wrapper">
-                              <div>Port</div>
-                              <Select
-                                defaultValue={port}
-                                style={{ width: 200 }}
-                                placeholder="Port"
-                                onChange={(e, name) => this.handleSelectorChange(e, name)}
-                              >
-                                <Option name="port" value="8080">8080 TCP</Option>
-                                <Option name="port" value="433">433 TCP</Option>
-                                <Option name="port" value="80">80 TCP</Option>
-                                <Option name="port" value="53">53 UDP</Option>
-                              </Select>
-                            </div>
-                            <div className="create_profile_port_description">{PORT_DESCRIPTION[port]}</div>
-                       </>) }
-                      {proto !== 'ovpn' ? <div className="create_profile_port_description">Protocol descr</div> : null }
-                    </div>
-                    <div className="create_profile_servers">
-                      Recommended servers:
-                      <div className="create_profile_servers_wrapper">
-                        <Button>Server1</Button>
-                        <Button>Server2</Button>
-                        <Button>Server3</Button>
-                      </div>
-                    </div>
-                  </div>
-
                 </div>
-              </>);
+                <div className="create_profile_tab_content_section_os">
+                  <div className="create_profile_buttonOs_wrapper">
+                    {OS.map(o => (
+                      <Button
+                        htmlType="button"
+                        className="create_profile_buttonOs"
+                        name="os"
+                        key={o.description}
+                        type={os === o.value ? 'primary' : null}
+                        value={o.value}
+                        onClick={this.handleOsChange}
+                      >
+                        <span className="create_profile_os_icon_wrapper">
+                          <Icon
+                            style={{ fontSize: 20 }}
+                            component={handleOsIcons(o.value)}
+                          />
+                          <span className="create_profile_os_icon_description">{o.description}</span>
+                        </span>
+                      </Button>
+                    ))}
+                  </div>
+                  <div className="create_profile_selectedOs">
+                            OS Selected:
+                    {' '}
+                    {os}
+                  </div>
+                </div>
+
+              </div>
+            </>
+          );
+        case 2:
+
+          return (
+            <>
+              <div className="create_profile_tab1_container">
+                <div className="create_profile_tab_content_section">
+                  <div> Select the protocol that you prefer and create profile.</div>
+                </div>
+                <div className="create_profile_tab_content_section_protocol">
+                  <div className="create_profile_selectors_wrapper">
+                    <div className="create_profile_selector_wrapper">
+                      <div>Protocol</div>
+                      <Select
+                        defaultValue={proto}
+                        style={{ width: 200 }}
+
+                        onChange={(e, name) => this.handleSelectorChange(e, name)}
+                      >
+                        <Option name="proto" value="ovpn">OpenVPN</Option>
+                        <Option name="proto" value="ikev">IKEv2</Option>
+                        <Option name="proto" value="l2tp">L2TP</Option>
+                        <Option name="proto" value="pptp">PPTP</Option>
+                      </Select>
+                    </div>
+                    {proto === 'ovpn' && (
+                      <>
+                        <div className="create_profile_selector_wrapper">
+                          <div>Client</div>
+                          <Select
+                            defaultValue={client}
+                            style={{ width: 200 }}
+
+                            onChange={(e, name) => this.handleSelectorChange(e, name)}
+                          >
+                            <Option name="client" value="ovpn">OpenVPN 2.3.4</Option>
+                            <Option name="client" value="tblick">TunnelBlick</Option>
+                          </Select>
+                        </div>
+
+                        <div className="create_profile_selector_wrapper">
+                          <div>Port</div>
+                          <Select
+                            defaultValue={port}
+                            style={{ width: 200 }}
+                            placeholder="Port"
+                            onChange={(e, name) => this.handleSelectorChange(e, name)}
+                          >
+                            <Option name="port" value="8080">8080 TCP</Option>
+                            <Option name="port" value="433">433 TCP</Option>
+                            <Option name="port" value="80">80 TCP</Option>
+                            <Option name="port" value="53">53 UDP</Option>
+                          </Select>
+                        </div>
+                        <div className="create_profile_port_description">{PORT_DESCRIPTION[port]}</div>
+                      </>
+                    ) }
+                    {proto !== 'ovpn' ? <div className="create_profile_port_description">Protocol descr</div> : null }
+                  </div>
+                  <div className="create_profile_servers">
+                      Recommended servers:
+                    <div className="create_profile_servers_wrapper">
+                      <div className="create_profile_servers_list">
+                        {actualServers.map(serv => (
+                          <Button value={serv.name} name="server" onClick={this.handleOsChange}>
+                            <span>
+                              {' '}
+                              <span>{serv.name}</span>
+                              {' '}
+                              <span>
+                                {' '}
+                                {serv.ping}
+                              </span>
+                            </span>
+                            {' '}
+                          </Button>
+
+                        ))}
+                      </div>
+                      <div className="create_profile_servers_caption">
+                        <span>* You can select any server after creating a profile.</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </>
+          );
         default:
           return <div> NO data</div>;
       }
@@ -353,6 +379,9 @@ const mapDispatchToProps = dispatch => ({
   },
   getSubscriptionList: () => {
     dispatch(getSubscriptions());
+  },
+  getServerList: () => {
+    dispatch(getServers());
   },
   onSubmitProfile: () => {
     dispatch(createVpn());

@@ -8,7 +8,7 @@ const initialState = {
   client: 'ovpn',
   proto: 'ovpn',
   port: '80',
-  server_id: 1,
+  server: '',
 };
 
 const vpnReducer = (state = initialState, action) => {

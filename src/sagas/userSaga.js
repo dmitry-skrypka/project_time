@@ -1,7 +1,7 @@
 import {
-  call, put, select,
+  call, put, select, all,
 } from 'redux-saga/effects';
-
+import ping from 'web-pingjs';
 
 import appConsts from '../config/appConsts';
 import UserService from '../services/userServices';
@@ -56,7 +56,7 @@ function* getSubscriptions() {
 
     yield put({
       type: ACTIONS.USER_GET_SUBSCRIPTIONS_DONE,
-      payload: subscriptions,
+      payload: subscriptions.data,
 
     });
   } catch (e) {
@@ -67,4 +67,57 @@ function* getSubscriptions() {
   }
 }
 
-export { getUserIP, getProfileList, getSubscriptions };
+function* getServers() {
+  try {
+    yield put({
+      type: ACTIONS.USER_GET_SERVERS_START,
+    });
+    const servers = yield call(UserService.getServers);
+
+    yield put({
+      type: ACTIONS.USER_GET_SERVERS_DONE,
+      payload: servers,
+
+    });
+  } catch (e) {
+    yield put({
+      type: ACTIONS.USER_GET_SERVERS_FAIL,
+
+    });
+  }
+}
+function* getServerPing(action) {
+  try {
+    const { servers } = action.payload.data;
+    yield put({
+      type: ACTIONS.USER_GET_SERVER_PING_START,
+    });
+
+    const responses = yield all(servers.map(server => call(function* () {
+      try {
+        return yield call(UserService.getServerPing, server);
+      } catch (err) {
+        return { err };
+      }
+    })));
+
+    const pings = yield all(responses.map(response => response));
+
+
+    yield put({
+      type: ACTIONS.USER_GET_SERVER_PING_DONE,
+      payload: pings.sort((a, b) => a.ping - b.ping),
+
+    });
+  } catch (e) {
+    yield put({
+      type: ACTIONS.USER_GET_SERVER_PING_FAIL,
+
+
+    });
+  }
+}
+
+export {
+  getUserIP, getProfileList, getSubscriptions, getServers, getServerPing,
+};

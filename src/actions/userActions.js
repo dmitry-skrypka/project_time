@@ -15,9 +15,12 @@ const getProfiles = () => ({
 const getSubscriptions = () => ({
   type: ACTIONS.USER_GET_SUBSCRIPTIONS,
 });
-
+const getServers = () => ({
+  type: ACTIONS.USER_GET_SERVERS,
+})
 export {
   getUserIP,
   getProfiles,
   getSubscriptions,
+  getServers
 };
