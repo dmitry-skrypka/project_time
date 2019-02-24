@@ -4,7 +4,9 @@ const { ACTIONS } = appConsts;
 
 
 const initialState = {
-  profiles: {},
+  profiles: [],
+  proxies: [],
+  shadowsocks: [],
 };
 
 const profilesReducer = (state = initialState, action) => {
@@ -12,7 +14,9 @@ const profilesReducer = (state = initialState, action) => {
     case ACTIONS.USER_GET_PROFILES_DONE:
       return {
         ...state,
-        profiles: action.payload,
+        profiles: action.payload.data.profiles,
+        proxies: action.payload.data.proxies,
+        shadowsocks: action.payload.data.shadowsocks,
       };
     default:
       return state;

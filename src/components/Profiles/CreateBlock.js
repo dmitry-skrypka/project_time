@@ -118,7 +118,7 @@ const mapDispatchToProps = dispatch => ({
 
 });
 const mapStateToProps = state => ({
-  // profiles: state.profiles,
+  profiles: state.profiles,
 });
 export default connect(mapStateToProps, mapDispatchToProps)(CreateBlock);
 

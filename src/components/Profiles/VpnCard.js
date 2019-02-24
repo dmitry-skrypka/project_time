@@ -14,13 +14,16 @@ function VpnCard(props) {
   const { profile, connected } = props;
   return (
     <div className="profile_card_container">
-      <div>
-        <Icon
-          style={{ fontSize: 20 }}
-          component={handleOsIcons(profile.os)}
-        />
+      <div className="profile_card_section">
+        <div>
+          <Icon
+            style={{ fontSize: 20 }}
+            component={handleOsIcons(profile.os)}
+          />
+          <div>{profile.name}</div>
+        </div>
+
       </div>
-      <div>{profile.name}</div>
       <div className="profile_card_section">
         <div>Session</div>
         <div>{connected ? 'Connected' : 'Disconnected'}</div>
