@@ -20,6 +20,31 @@ const createVpn = () => ({
   type: ACTIONS.CREATE_PROFILE,
 });
 
+
+const proxyNameChange = name => ({
+  type: ACTIONS.CREATE_PROXY_NAME_CHANGE,
+  payload: name,
+});
+const proxySelectorChange = value => ({
+  type: ACTIONS.CREATE_PROXY_SELECTOR_CHANGE,
+  payload: value,
+});
+const proxyOsChange = os => ({
+  type: ACTIONS.CREATE_PROXY_OS_CHANGE,
+  payload: os,
+});
+const createProxy = () => ({
+  type: ACTIONS.CREATE_PROFILE_PROXY,
+});
+
+
 export {
-  vpnNameChange, vpnSelectorChange, vpnOsChange, createVpn,
+  vpnNameChange,
+  vpnSelectorChange,
+  vpnOsChange,
+  createVpn,
+  proxyNameChange,
+  proxySelectorChange,
+  createProxy,
+  proxyOsChange,
 };

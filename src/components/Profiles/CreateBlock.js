@@ -50,8 +50,18 @@ function More() {
   const { Option } = Select;
 
   function handleChange(value) {
-    console.log(`selected ${value}`);
-    history.push('/create');
+    console.log(value);
+    switch (value) {
+      case 'vpn':
+        history.push('/create');
+        break;
+      case 'sock':
+      case 'shadowsock':
+        history.push('/create_proxy');
+        break;
+      default:
+        history.push('/create_proxy');
+    }
   }
 
   return (

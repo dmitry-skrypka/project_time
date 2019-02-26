@@ -3,6 +3,7 @@ import './styles.css';
 import {
   Icon, Divider, Input, Steps, Select, message, Button, Form,
 } from 'antd';
+
 import { connect } from 'react-redux';
 import {
   createVpn, vpnNameChange, vpnOsChange, vpnSelectorChange,
@@ -67,6 +68,7 @@ traffic and excellent speed, but not some providers support.
 
 const { Option } = Select;
 const { Step } = Steps;
+const FormItem = Form.Item;
 
 const OS = [{
   value: 'win',
@@ -96,6 +98,7 @@ class CreateNewVPN extends React.Component {
     this.state = {
       current: 0,
       steps: 3,
+      error: '',
     };
     this.handleOsChange = this.handleOsChange.bind(this);
   }
@@ -107,13 +110,23 @@ class CreateNewVPN extends React.Component {
   }
 
   next() {
+    const {
+      name,
+    } = this.props.vpn;
     const current = this.state.current + 1;
-    this.setState({ current });
+    console.log(name.length);
+    if (name.length < 2) {
+      this.setState({ error: 'error' });
+    } else { this.setState({ current, error: '' }); }
   }
 
   prev() {
     const current = this.state.current - 1;
     this.setState({ current });
+  }
+
+  handleInputFocus = () => {
+    this.setState({ error: '' });
   }
 
      handleNameChange = (e) => {
@@ -143,13 +156,22 @@ class CreateNewVPN extends React.Component {
 
     handleStepsContent = (current) => {
       const {
-        name, subscription, os, client, proto, port,
+        name, subscription, os, client, proto, port, server,
       } = this.props.vpn;
-
+      const { error } = this.state;
       const { subscriptions } = this.props.user;
       const { servers } = this.props.user;
       const actualServers = servers.slice(0, 3);
-      console.log(actualServers);
+      // const formItemLayout = {
+      //   labelCol: {
+      //     xs: { span: 24 },
+      //     sm: { span: 5 },
+      //   },
+      //   wrapperCol: {
+      //     xs: { span: 24 },
+      //     sm: { span: 12 },
+      //   },
+      // };
       switch (current) {
         case 0:
           return (
@@ -159,8 +181,14 @@ class CreateNewVPN extends React.Component {
                   <div className="create_profile_tab_content_section">
 
                     <div> Name</div>
-
-                    <Input value={name} style={{ width: 200 }} addonBefore={<div>Name</div>} onChange={this.handleNameChange} placeholder="Name" />
+                    <Form>
+                      <FormItem
+                        validateStatus={error}
+                        help={error ? 'Your profile name must consist of at least 2 characters' : null}
+                      >
+                        <Input style={{ width: 200 }} value={name} onChange={this.handleNameChange} placeholder="Name" onFocus={this.handleInputFocus} />
+                      </FormItem>
+                    </Form>
                   </div>
                   <div className="create_profile_tab_content_section">
                     <div> Subscription</div>
@@ -293,7 +321,7 @@ remaining]
                     <div className="create_profile_servers_wrapper">
                       <div className="create_profile_servers_list">
                         {actualServers.map(serv => (
-                          <Button value={serv.name} name="server" onClick={this.handleOsChange}>
+                          <Button key={serv.name} type={server === serv.name ? 'primary' : null} value={serv.name} name="server" onClick={this.handleOsChange}>
                             <span>
                               {' '}
                               <span>{serv.name}</span>
@@ -324,7 +352,6 @@ remaining]
     }
 
     render() {
-      const { name } = this.props.vpn;
       const { current, steps } = this.state;
       return (
         <div className="profiles_container">
@@ -343,7 +370,7 @@ remaining]
               <div className="steps-action">
                 {
                           current < steps - 1
-                          && <Button type="primary" htmlType="submit" onClick={() => (name ? this.next() : null)}>Next</Button>
+                          && <Button type="primary" htmlType="submit" onClick={() => (this.next())}>Next</Button>
                       }
                 {
                           current === steps - 1

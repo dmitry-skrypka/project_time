@@ -6,7 +6,7 @@ import IpSection from '../IpSection';
 import history from '../../config/history';
 import ProfilesContainer from '../Profiles';
 import CreateNewVPN from '../Profiles/CreateNewVPN';
-
+import CreateNewPROXY from '../Profiles/CreateNewPROXY';
 const { Header, Footer, Content } = Layout;
 
 class MainContainer extends React.Component {
@@ -26,6 +26,7 @@ class MainContainer extends React.Component {
               <Switch>
                 <Route exact path="/" render={() => <ProfilesContainer />} />
                 <Route path="/create" render={() => <CreateNewVPN />} />
+                  <Route path="/create_proxy" render={() => <CreateNewPROXY />} />
               </Switch>
             </Router>
           </Content>

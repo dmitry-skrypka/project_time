@@ -17,10 +17,10 @@ const getSubscriptions = () => ({
 });
 const getServers = () => ({
   type: ACTIONS.USER_GET_SERVERS,
-})
+});
 export {
   getUserIP,
   getProfiles,
   getSubscriptions,
-  getServers
+  getServers,
 };
