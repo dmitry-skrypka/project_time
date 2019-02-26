@@ -5,15 +5,18 @@ import handleOsIcons from '../../helpers/osIcon';
 
 function VpnCard(props) {
   const Option = Select.Option;
+  const { onProfileClick, profile, connected } = props;
 
   function handleChange(value) {
     console.log(`selected ${value}`);
     history.push('/create');
   }
+  function handleClick(id) {
+    onProfileClick(id);
+  }
 
-  const { profile, connected } = props;
   return (
-    <div className="profile_card_container">
+    <div className="profile_card_container" onClick={() => handleClick(profile.id)}>
       <div className="profile_card_section">
         <div>
           <Icon

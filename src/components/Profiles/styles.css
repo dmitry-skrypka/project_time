@@ -25,11 +25,31 @@
   flex-direction: column;
 }
 
-.profile_card_container {
-  display: flex;
-  padding: 10px;
-  justify-content: space-between;
+.ant-layout, .ant-layout * {
+  box-sizing: border-box;
 }
+.profile_card_container {
+
+  display: flex;
+  padding: 20px;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  box-shadow: none;
+  border: 1px solid #eaecee;
+  color: #575757;
+  font-weight: normal;
+  -webkit-transition: all .12s ease-out;
+  transition: all .12s ease-out;
+  margin: 5px;
+  cursor: pointer;
+
+}
+
+.profile_card_container:hover {
+  box-shadow: 0 0 3px #dee2e5;
+  opacity: 1;
+}
+
 .create_profile_header {
   padding-top: 20px;
 }

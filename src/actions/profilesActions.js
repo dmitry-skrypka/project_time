@@ -36,8 +36,14 @@ const proxyOsChange = os => ({
 const createProxy = () => ({
   type: ACTIONS.CREATE_PROFILE_PROXY,
 });
-
-
+const getProfileInfo = id => ({
+  type: ACTIONS.GET_PROFILE_INFO,
+  payload: id,
+});
+const onProfileSelect = id => ({
+  type: ACTIONS.PROFILE_SELECTED,
+  payload: id,
+});
 export {
   vpnNameChange,
   vpnSelectorChange,
@@ -47,4 +53,6 @@ export {
   proxySelectorChange,
   createProxy,
   proxyOsChange,
+  getProfileInfo,
+  onProfileSelect,
 };

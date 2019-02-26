@@ -4,6 +4,7 @@ const { ACTIONS } = appConsts;
 
 
 const initialState = {
+  selectedProfileID: '',
   profiles: [],
   proxies: [],
   shadowsocks: [],
@@ -17,6 +18,11 @@ const profilesReducer = (state = initialState, action) => {
         profiles: action.payload.data.profiles,
         proxies: action.payload.data.proxies,
         shadowsocks: action.payload.data.shadowsocks,
+      };
+    case ACTIONS.PROFILE_SELECTED:
+      return {
+        ...state,
+        selectedProfileID: action.payload,
       };
     default:
       return state;
