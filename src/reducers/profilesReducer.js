@@ -5,6 +5,26 @@ const { ACTIONS } = appConsts;
 
 const initialState = {
   selectedProfileID: '',
+  selectedProfile: {
+    client_soft: '',
+    connect: null,
+    connected: false,
+    disable: false,
+    domain: '',
+    histories: [],
+    online: '',
+    os: '',
+    password: '',
+    port: 0,
+    ports: [],
+    proto: '',
+    protocol: '',
+    server: {},
+    session: null,
+    switch_ips: {},
+    tags: [],
+    username: '',
+  },
   profiles: [],
   proxies: [],
   shadowsocks: [],
@@ -23,6 +43,13 @@ const profilesReducer = (state = initialState, action) => {
       return {
         ...state,
         selectedProfileID: action.payload,
+      };
+
+    case ACTIONS.GET_PROFILE_INFO_DONE:
+
+      return {
+        ...state,
+        selectedProfile: action.payload,
       };
     default:
       return state;

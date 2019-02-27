@@ -7,16 +7,18 @@ function VpnCard(props) {
   const Option = Select.Option;
   const { onProfileClick, profile, connected } = props;
 
-  function handleChange(value) {
+  function handleChange(e, value) {
+    e.stopPropagation();
     console.log(`selected ${value}`);
     history.push('/create');
   }
-  function handleClick(id) {
+  function handleClick(e, id) {
+    e.stopPropagation();
     onProfileClick(id);
   }
 
   return (
-    <div className="profile_card_container" onClick={() => handleClick(profile.id)}>
+    <div className="profile_card_container" onClick={e => handleClick(e, profile.id)}>
       <div className="profile_card_section">
         <div>
           <Icon
@@ -47,11 +49,12 @@ Mb/s
         <div>Used</div>
         <div>{profile.online}</div>
       </div>
-      <div>
+      <div onClick={e => e.stopPropagation()}>
         <Select
-          style={{ width: 200 }}
+          style={{ width: 200, zIndex: 300 }}
           placeholder="Actions"
           onChange={handleChange}
+
         >
           <Option value="activity">Activity</Option>
           <Option value="services">Services</Option>

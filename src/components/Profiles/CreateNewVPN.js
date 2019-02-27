@@ -293,7 +293,7 @@ remaining]
                             onChange={(e, name) => this.handleSelectorChange(e, name)}
                           >
                             <Option name="client" value="ovpn">OpenVPN 2.3.4</Option>
-                            <Option name="client" value="tblick">TunnelBlick</Option>
+                            <Option name="client" value="blick">TunnelBlick</Option>
                           </Select>
                         </div>
 
@@ -321,7 +321,7 @@ remaining]
                     <div className="create_profile_servers_wrapper">
                       <div className="create_profile_servers_list">
                         {actualServers.map(serv => (
-                          <Button key={serv.name} type={server === serv.name ? 'primary' : null} value={serv.name} name="server" onClick={this.handleOsChange}>
+                          <Button key={serv.name} type={server === serv.id.toString() ? 'primary' : null} value={serv.id} name="server" onClick={this.handleOsChange}>
                             <span>
                               {' '}
                               <span>{serv.name}</span>

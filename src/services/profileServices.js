@@ -12,6 +12,18 @@ class ProfileService {
       },
     });
   }
+
+
+  static getProfile(id) {
+    console.log('start axios');
+    return axios(`${appConsts.BACKEND_URL}/app/v1/profile/${id}`, {
+      method: 'GET',
+      withCredentials: true,
+      // params: {
+      //  id
+      // },
+    });
+  }
 }
 
 

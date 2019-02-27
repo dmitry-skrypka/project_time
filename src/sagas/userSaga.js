@@ -95,7 +95,6 @@ function* getServerPing(action) {
 
     const responses = yield all(servers.map(server => call(function* () {
       try {
-        console.log(UserService.getServerPing(server));
         return yield call(UserService.getServerPing, server);
       } catch (err) {
         return { err };
@@ -104,8 +103,6 @@ function* getServerPing(action) {
 
     const pings = yield all(responses.map(response => response));
 
-    console.log(responses);
-    console.log(pings);
     yield put({
       type: ACTIONS.USER_GET_SERVER_PING_DONE,
       payload: pings.sort((a, b) => a.ping - b.ping),
