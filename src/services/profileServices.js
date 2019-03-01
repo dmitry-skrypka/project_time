@@ -15,13 +15,21 @@ class ProfileService {
 
 
   static getProfile(id) {
-    console.log('start axios');
     return axios(`${appConsts.BACKEND_URL}/app/v1/profile/${id}`, {
       method: 'GET',
       withCredentials: true,
-      // params: {
-      //  id
-      // },
+
+    });
+  }
+
+  static deleteProfile(id) {
+    // axios.defaults.withCredentials = true;
+    return axios(`${appConsts.BACKEND_URL}/app/v1/profiles/`, {
+      method: 'DELETE',
+      withCredentials: true,
+      params: {
+        profile_id: id,
+      },
     });
   }
 }

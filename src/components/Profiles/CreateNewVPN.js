@@ -193,13 +193,13 @@ class CreateNewVPN extends React.Component {
                   <div className="create_profile_tab_content_section">
                     <div> Subscription</div>
                     <Select
-                      defaultValue={subscription}
+                      defaultValue={1110}
                       style={{ width: 200 }}
-                      placeholder="Create new profile"
+                      // placeholder="Create new profile"
                       onChange={(e, name) => this.handleSelectorChange(e, name)}
                     >
                       {subscriptions.map(subs => (
-                        <Option key={subs.name} name="subscription" value={subs.name}>
+                        <Option key={subs.id} name="subscription" value={subs.id}>
 
                           {subs.name}
                           {' '}

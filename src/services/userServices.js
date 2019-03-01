@@ -61,7 +61,7 @@ class UserService {
     //           if (xhr.seq > 1) {
     //             deltaTime = Date.now() - start;
     //             timeCumul += deltaTime;
-    //
+    //            resolve(xhr.
     //
     //             // return deltaTime;
     //           }

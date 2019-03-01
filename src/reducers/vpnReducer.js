@@ -4,7 +4,7 @@ const { ACTIONS } = appConsts;
 const initialState = {
   name: '',
   os: 'win',
-  subscription: 'Free trial',
+  subscription: '1110',
   client: 'ovpn',
   proto: 'ovpn',
   port: '80',

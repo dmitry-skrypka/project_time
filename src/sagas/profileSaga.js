@@ -70,6 +70,27 @@ function* getProfileById(action) {
     });
   }
 }
+function* deleteProfileById(action) {
+  try {
+    yield put({
+      type: ACTIONS.DELETE_PROFILE_START,
+    });
+
+    const id = action.payload;
+
+    const profile = yield call(ProfileService.deleteProfile, id);
+    console.log(profile);
+    yield put({
+      type: ACTIONS.DELETE_PROFILE_DONE,
 
 
-export { createProfile, getProfileById };
+    });
+  } catch (e) {
+    yield put({
+      type: ACTIONS.DELETE_PROFILE_FAIL,
+
+    });
+  }
+}
+
+export { createProfile, getProfileById, deleteProfileById };

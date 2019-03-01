@@ -4,6 +4,7 @@ const { ACTIONS } = appConsts;
 
 
 const initialState = {
+  selectedTab: '1',
   selectedProfileID: '',
   selectedProfile: {
     client_soft: '',
@@ -50,6 +51,12 @@ const profilesReducer = (state = initialState, action) => {
       return {
         ...state,
         selectedProfile: action.payload,
+      };
+    case ACTIONS.SET_TAB:
+
+      return {
+        ...state,
+        selectedTab: action.payload,
       };
     default:
       return state;

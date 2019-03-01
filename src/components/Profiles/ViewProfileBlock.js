@@ -66,12 +66,12 @@ Disable
   }
 
   render() {
-    const { selectedProfile } = this.props.profiles;
+    const { selectedProfile, selectedTab } = this.props.profiles;
     console.log(this.props);
     return (
       <Card
         style={{ width: '100%', margin: 10 }}
-        extra={this.more}
+        // extra={this.more}
       >
         <div>
           <Row>
@@ -88,7 +88,7 @@ Disable
             </Col>
           </Row>
         </div>
-        <Tabs tabBarExtraContent={this.viewExtra()}>
+        <Tabs tabBarExtraContent={this.viewExtra()} activeKey={selectedTab}>
           <TabPane tab="Activity" key="1">
             <div>dsdsdsdsd</div>
           </TabPane>

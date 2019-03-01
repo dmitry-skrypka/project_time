@@ -40,6 +40,15 @@ const getProfileInfo = id => ({
   type: ACTIONS.GET_PROFILE_INFO,
   payload: id,
 });
+
+const setTabProfileView = tab => ({
+  type: ACTIONS.SET_TAB,
+  payload: tab,
+});
+const onProfileDelete = id => ({
+  type: ACTIONS.DELETE_PROFILE,
+  payload: id,
+});
 const onProfileSelect = id => ({
   type: ACTIONS.PROFILE_SELECTED,
   payload: id,
@@ -55,4 +64,6 @@ export {
   proxyOsChange,
   getProfileInfo,
   onProfileSelect,
+  setTabProfileView,
+  onProfileDelete,
 };
