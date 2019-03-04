@@ -136,36 +136,36 @@ remaining]
         case 1:
 
           return (
-              <>
-                <div className="create_profile_tab1_container">
-                  <div className="create_profile_tab_content_section">
-                    <div> Select the server that you prefer and create profile.</div>
-                  </div>
-                  <div className="create_profile_tab_content_section_protocol">
-                    <div className="create_profile_selectors_wrapper">
-                      <div className="create_profile_selector_wrapper">
-                        <div>PROXY</div>
-                        <div style={{ width: 300 }}>
-                          <span>
-                            <span className="bold">Socket Secure (SOCKS)</span>
-                            {' '}
+            <>
+              <div className="create_profile_tab1_container">
+                <div className="create_profile_tab_content_section">
+                  <div> Select the server that you prefer and create profile.</div>
+                </div>
+                <div className="create_profile_tab_content_section_protocol">
+                  <div className="create_profile_selectors_wrapper">
+                    <div className="create_profile_selector_wrapper">
+                      <div>PROXY</div>
+                      <div style={{ width: 300 }}>
+                        <span>
+                          <span className="bold">Socket Secure (SOCKS)</span>
+                          {' '}
 is an Internet protocol that exchanges network packets between a client and server through a proxy server.
-                            {' '}
-                            <span className="bold">SOCKS5</span>
-                            {' '}
+                          {' '}
+                          <span className="bold">SOCKS5</span>
+                          {' '}
 additionally provides authentication so only authorized users may access a server.
-                          </span>
-                        </div>
+                        </span>
                       </div>
-
                     </div>
-                    <div className="create_profile_servers">
+
+                  </div>
+                  <div className="create_profile_servers">
                       Recommended servers:
-                      <div className="create_profile_servers_wrapper">
-                        <div className="create_profile_servers_list">
-                          {actualServers.map(serv => (
-                            <Button key={serv.name} type={server === serv.name ? 'primary' : null} value={serv.name} name="server" onClick={this.handleOsChange}>
-                              <span>
+                    <div className="create_profile_servers_wrapper">
+                      <div className="create_profile_servers_list">
+                        {actualServers.map(serv => (
+                          <Button key={serv.name} type={server === serv.name ? 'primary' : null} value={serv.name} name="server" onClick={this.handleOsChange}>
+                            <span>
                                 {' '}
                                 <span>{serv.name}</span>
                                 {' '}
@@ -174,20 +174,20 @@ additionally provides authentication so only authorized users may access a serve
                                   {serv.ping}
                                 </span>
                               </span>
-                              {' '}
-                            </Button>
+                            {' '}
+                          </Button>
 
-                          ))}
-                        </div>
-                        <div className="create_profile_servers_caption">
-                          <span>* You can select any server after creating a profile.</span>
-                        </div>
+                        ))}
+                      </div>
+                      <div className="create_profile_servers_caption">
+                        <span>* You can select any server after creating a profile.</span>
                       </div>
                     </div>
                   </div>
-
                 </div>
-              </>
+
+              </div>
+            </>
           );
         default:
           return <div> NO data</div>;

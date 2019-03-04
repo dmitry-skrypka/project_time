@@ -63,7 +63,7 @@ function VpnCard(props) {
   function handleMenuClick(e) {
     switch (e.item.props.value) {
       case 'activity':
-        onTabChange('1');
+        onTabChange({ tab: '1', selectedProfileID: profile.id });
         history.push(`/${profile.id}/view/`);
         break;
       case 'services':

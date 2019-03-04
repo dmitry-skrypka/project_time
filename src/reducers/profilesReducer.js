@@ -56,7 +56,8 @@ const profilesReducer = (state = initialState, action) => {
 
       return {
         ...state,
-        selectedTab: action.payload,
+        selectedTab: action.payload.tab,
+        selectedProfileID: action.payload.selectedProfileID,
       };
     default:
       return state;

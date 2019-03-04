@@ -22,7 +22,7 @@ const PORT_DESCRIPTION = {
     protocol without TLS and with
     <span className="bold"> authorization</span>
 . Works well for mikrotik and other routers.
-        </span>,
+  </span>,
 
   433: <span>
     <span className="bold">433</span>
@@ -36,7 +36,7 @@ protocol, looks like
     <span className="bold"> HTTPS </span>
     {' '}
 traffic and excellent speed, but not some providers support.
-       </span>,
+  </span>,
   80: <span>
     <span className="bold">80</span>
     {' '}
@@ -49,7 +49,7 @@ protocol, looks like
     <span className="bold">HTTP</span>
     {' '}
 traffic, excellent for unlocking the Internet at airports and any Wi-Fi hotspots.
-      </span>,
+  </span>,
   53: <span>
     {' '}
     <span className="bold"> 53 </span>
@@ -62,7 +62,7 @@ protocol, looks like
     <span className="bold">DNS</span>
     {' '}
 traffic and excellent speed, but not some providers support.
-      </span>,
+  </span>,
 };
 
 

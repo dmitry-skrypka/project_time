@@ -46,7 +46,7 @@ function http_ping(hostname, server_id, name, location, total, choose) {
           if (ping.seq > 1) {
             delta_time = Date.now() - ping.date1;
             time_cumul += delta_time;
-          console.log(delta_time)
+            console.log(delta_time);
             // var percent = Math.floor(((ping.seq-1)/NB_ITERATIONS)*100)  + '%';
             // var $this   = $('.progress-bar-servers');
             // $this.css('width', percent);

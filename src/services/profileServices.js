@@ -15,7 +15,8 @@ class ProfileService {
 
 
   static getProfile(id) {
-    return axios(`${appConsts.BACKEND_URL}/app/v1/profile/${id}`, {
+    console.log('sss');
+    return axios(`${appConsts.BACKEND_URL}/app/v1/profile/${id}/`, {
       method: 'GET',
       withCredentials: true,
 

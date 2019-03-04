@@ -79,7 +79,7 @@ function* deleteProfileById(action) {
     const id = action.payload;
 
     const profile = yield call(ProfileService.deleteProfile, id);
-    console.log(profile);
+
     yield put({
       type: ACTIONS.DELETE_PROFILE_DONE,
 
