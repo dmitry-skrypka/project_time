@@ -8,6 +8,7 @@ import ProfilesContainer from '../Profiles';
 import CreateNewVPN from '../Profiles/CreateNewVPN';
 import CreateNewPROXY from '../Profiles/CreateNewPROXY';
 import ViewProfileBlock from '../Profiles/ViewProfileBlock';
+import './styles.css';
 
 const { Header, Footer, Content } = Layout;
 
