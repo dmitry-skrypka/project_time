@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa143726-5a91-4f09-a322-6f6a2aaf54cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/svg/icons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MainContainer/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/profilesActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/profilesActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/IpSection/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/IpSection/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/IpSection/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/IpSection/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainContainer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainContainer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profiles/CreateBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profiles/CreateBlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profiles/CreateNewVPN.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profiles/CreateNewVPN.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profiles/ViewProfileBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profiles/ViewProfileBlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profiles/VpnCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profiles/VpnCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profiles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profiles/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/appConsts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/appConsts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/vpnReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/vpnReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-    </list>
+    <list default="true" id="fa143726-5a91-4f09-a322-6f6a2aaf54cc" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -376,12 +356,12 @@
       <workItem from="1551427878141" duration="705000" />
       <workItem from="1551443840109" duration="5784000" />
       <workItem from="1551451271104" duration="109000" />
-      <workItem from="1551856345558" duration="15490000" />
+      <workItem from="1551856345558" duration="16275000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176892000" />
+    <option name="totallyTimeSpent" value="177677000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="224" y="113" width="1567" height="872" extended-state="0" />
