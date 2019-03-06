@@ -25,7 +25,9 @@ code {
   color: #d3d7dc;
   background-color: #343a40;
 }
-
+.ma0 {
+  margin: 0 !important;
+}
 /*.content-header-section {*/
   /*-webkit-box-flex: 0;*/
   /*-ms-flex: 0 0 auto;*/

@@ -1,17 +1,26 @@
 .ip-section {
-  width: 250px;
+  width: 300px;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+  flex-wrap: nowrap;
+  flex-direction: row;
 
 }
 
 .section-item {
   display: inline-block;
-  height: 34px;
-  line-height: 34px;
   vertical-align: middle;
 }
+
+.section-item--status {
+  height: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
 .logo_VPN {
   color: #42a5f5;
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -21,9 +30,33 @@
   text-align: left;
 
 }
+
 .section_status {
-  line-height: 11px;
-padding: 3px;
-  font-size: 0.857143rem !important;
+  font-size: 12px;
+  line-height: 1.8;
+  padding: 3px;
   margin-left: 2px;
+}
+
+.section_status .Unprotected {
+  color: #ef5350;
+  font-weight: 600;
+}
+
+.section_status .Protected {
+  color: #9ccc65;
+  font-weight: 600;
+}
+
+.logo_time {
+  font-size: 20px;
+  font-weight: 700;
+}
+.logo_VPN {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.section-item--logo {
+  margin-right: 25px;
 }

@@ -91,3 +91,64 @@
 .create_profile_os_icon_description {
 
 }
+
+.view_profile_tab_connect {
+  text-align: center;
+  padding: 15px;
+}
+
+.view_profile_tab_connect_wrapper {
+  padding: 20px;
+}
+
+.view_profile_tab_connect_icon_caption{
+  background-color: #acacac;
+  border-radius: 0.25rem;
+  margin-top: 5px;
+}
+.view_profile_tab_connect_icons_block {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+
+.view_profile_tab_connect_icon_wrapper {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 105px;
+  text-align: center;
+  padding: 5px;
+}
+.view_profile_tab_connect_button_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.view_profile_tab_connect_button{
+  margin: 5px;
+}
+
+.badge_blue {
+  color: #fff;
+  background-color: #42a5f5;
+
+}
+
+.view_profile_badge {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 85%;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+}
+.view_profile_tab_overview_container {
+  text-align: center;
+  margin-top: 10px;
+}
+

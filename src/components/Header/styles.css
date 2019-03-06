@@ -1,7 +1,66 @@
 .header-container {
-  width: 50%;
+  width: 68%;
+  margin-right: -20px;
 }
 .header-container .nav-menu {
   color: #d3d7dc;
   background-color: #343a40;
+}
+
+.my-account {
+  border: none !important;
+  float: right;
+}
+
+.my-account:hover {
+  color: #fff !important;
+}
+.header-menu__item-value {
+  padding: 9px 14px;
+  border-radius: 3px;
+}
+
+.ant-menu-horizontal {
+  border: none !important;
+  line-height: 64px !important;
+  font-weight: 600;
+}
+
+.ant-menu-item {
+  border: none !important;
+}
+
+.ant-menu-horizontal>.ant-menu-item-active, .ant-menu-horizontal>.ant-menu-item-open, .ant-menu-horizontal>.ant-menu-item-selected, .ant-menu-horizontal>.ant-menu-item:hover, .ant-menu-horizontal>.ant-menu-submenu-active, .ant-menu-horizontal>.ant-menu-submenu-open, .ant-menu-horizontal>.ant-menu-submenu-selected, .ant-menu-horizontal>.ant-menu-submenu:hover {
+  color: #fff !important;
+}
+
+.ant-menu-horizontal>.ant-menu-item-active .header-menu__item-value, .ant-menu-horizontal>.ant-menu-item-open .header-menu__item-value, .ant-menu-horizontal>.ant-menu-item-selected .header-menu__item-value, .ant-menu-horizontal>.ant-menu-item:hover .header-menu__item-value, .ant-menu-horizontal>.ant-menu-submenu-active .header-menu__item-value, .ant-menu-horizontal>.ant-menu-submenu-open .header-menu__item-value, .ant-menu-horizontal>.ant-menu-submenu-selected .header-menu__item-value, .ant-menu-horizontal>.ant-menu-submenu:hover .header-menu__item-value{
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.ant-menu-horizontal>.ant-menu-item-active, .ant-menu-horizontal>.ant-menu-item-open, .ant-menu-horizontal>.ant-menu-item-selected, .ant-menu-horizontal>.ant-menu-item:hover, .ant-menu-horizontal>.ant-menu-submenu-active, .ant-menu-horizontal>.ant-menu-submenu-open, .ant-menu-horizontal>.ant-menu-submenu-selected, .ant-menu-horizontal>.ant-menu-submenu:hover{
+  color: #fff !important;
+}
+
+.ant-menu-submenu-title:hover {
+  color: #fff !important;
+}
+
+.ant-menu-item, .ant-menu-submenu-title {
+  padding: 0 5px !important;
+}
+
+.ant-menu-submenu>.ant-menu {
+  background-color: #343a40 !important;
+  color: #b7bec5;
+}
+
+.ant-menu-item-selected, .ant-menu-item-selected>a, .ant-menu-item-selected>a:hover,
+.ant-menu-item-active, .ant-menu-item-active>a, .ant-menu-item-active>a:hover {
+  color: #fff !important;
+  /*background-color: rgba(0, 0, 0, 0.25) !important;*/
+}
+
+.ant-menu-item-group-list .ant-menu-item {
+  padding: 0 14px !important;
 }

@@ -9,28 +9,11 @@ import VpnCard from './VpnCard';
 import SockCard from './SockCard';
 import { getProfiles } from '../../actions/userActions';
 import { onProfileSelect } from '../../actions/profilesActions';
+import { ShieldSvg } from '../../assets/svg/icons';
 
 const { TabPane } = Tabs;
 
-const ShieldSvg = () => (
-  <svg
-    aria-hidden="true"
-    focusable="false"
-    data-prefix="fas"
-    data-icon="shield-alt"
-    className="svg-inline--fa fa-shield-alt fa-w-16"
-    role="img"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 512 512"
-    width="1em"
-    height="1em"
-  >
-    <path
-      fill="currentColor"
-      d="M466.5 83.7l-192-80a48.15 48.15 0 0 0-36.9 0l-192 80C27.7 91.1 16 108.6 16 128c0 198.5 114.5 335.7 221.5 380.3 11.8 4.9 25.1 4.9 36.9 0C360.1 472.6 496 349.3 496 128c0-19.4-11.7-36.9-29.5-44.3zM256.1 446.3l-.1-381 175.9 73.3c-3.3 151.4-82.1 261.1-175.8 307.7z"
-    />
-  </svg>
-);
+
 const ShieldIcon = props => <Icon component={ShieldSvg} {...props} />;
 const Title = () => (
   <div className="create_block_create_new">
@@ -111,17 +94,17 @@ class CreateBlock extends React.Component {
         <Tabs>
           <TabPane tab="Virtual Private Networks" key="1">
             {profiles.length
-              ? profiles.map(profile => <VpnCard key={profile.name} profile={profile} onProfileClick={this.handleProfileClick} />)
+              ? profiles.map(profile => <VpnCard key={profile.id} profile={profile} onProfileClick={this.handleProfileClick} />)
               : ' You do not have a VPN profiles. Create a new VPN profile.'}
           </TabPane>
           <TabPane tab="Proxies" key="2">
             {proxies.length
-              ? proxies.map(proxy => <SockCard profile={proxy} />)
+              ? proxies.map(proxy => <SockCard profile={proxy} key={proxy.id} />)
               : ' You do not have a VPN profiles. Create a new VPN profile.'}
           </TabPane>
           <TabPane tab="Shadowsocks" key="3">
             {shadowsocks.length
-              ? shadowsocks.map(profile => <SockCard profile={profile} />)
+              ? shadowsocks.map(socks => <SockCard profile={socks} key={socks.id} />)
               : ' You do not have a VPN profiles. Create a new VPN profile.'}
           </TabPane>
         </Tabs>

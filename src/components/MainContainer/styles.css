@@ -1,0 +1,14 @@
+.header {
+  padding: 0 !important;
+  max-width: 1200px;
+  width: 100%;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  margin: 0 auto;
+  line-height: 66px !important;
+  height: 66px !important;
+}
+
+.header-wrapper {
+  background-color: #343a40;
+}

@@ -16,13 +16,14 @@ class MainContainer extends React.Component {
     return (
       <>
         <Layout className="main-container">
-          <Header className="layout-Header">
-            <Row type="flex" justify="center">
-              <IpSection />
-              <NavBar />
-            </Row>
-          </Header>
-
+          <div className="header-wrapper">
+            <Header className="layout-Header header">
+              <Row type="flex" justify="space-between">
+                <IpSection />
+                <NavBar />
+              </Row>
+            </Header>
+          </div>
           <Content>
             <Router history={history}>
               <Switch>
@@ -30,6 +31,7 @@ class MainContainer extends React.Component {
                 <Route path="/create" render={() => <CreateNewVPN />} />
                 <Route path="/create_proxy" render={() => <CreateNewPROXY />} />
                 <Route path="/:id/view" render={() => <ViewProfileBlock />} />
+                <Route path="/:id/setup" render={() => <CreateNewVPN />} />
               </Switch>
             </Router>
           </Content>

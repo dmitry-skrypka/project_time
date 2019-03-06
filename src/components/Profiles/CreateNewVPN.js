@@ -114,7 +114,6 @@ class CreateNewVPN extends React.Component {
       name,
     } = this.props.vpn;
     const current = this.state.current + 1;
-    console.log(name.length);
     if (name.length < 2) {
       this.setState({ error: 'error' });
     } else { this.setState({ current, error: '' }); }
@@ -156,7 +155,7 @@ class CreateNewVPN extends React.Component {
 
     handleStepsContent = (current) => {
       const {
-        name, subscription, os, client, proto, port, server,
+        name, os, client, proto, port, server,
       } = this.props.vpn;
       const { error } = this.state;
       const { subscriptions } = this.props.user;
@@ -199,7 +198,7 @@ class CreateNewVPN extends React.Component {
                       onChange={(e, name) => this.handleSelectorChange(e, name)}
                     >
                       {subscriptions.map(subs => (
-                        <Option key={subs.id} name="subscription" value={subs.id}>
+                        <Option key={subs.id || Math.random()} name="subscription" value={subs.id}>
 
                           {subs.name}
                           {' '}

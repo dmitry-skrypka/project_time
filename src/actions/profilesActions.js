@@ -53,6 +53,10 @@ const onProfileSelect = id => ({
   type: ACTIONS.PROFILE_SELECTED,
   payload: id,
 });
+const onSetupVpn = profile => ({
+  type: ACTIONS.SETUP_VPN,
+  payload: profile,
+});
 export {
   vpnNameChange,
   vpnSelectorChange,
@@ -66,4 +70,5 @@ export {
   onProfileSelect,
   setTabProfileView,
   onProfileDelete,
+  onSetupVpn,
 };

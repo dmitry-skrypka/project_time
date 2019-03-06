@@ -50,6 +50,7 @@ class AppConsts {
       GET_PROFILE_INFO_FAIL: 'GET_PROFILE_INFO_FAIL',
       PROFILE_SELECTED: 'PROFILE_SELECTED',
       SET_TAB: 'SET_TAB',
+      SETUP_VPN: 'SETUP_VPN',
     };
 
     static TEXT_PROTO = {

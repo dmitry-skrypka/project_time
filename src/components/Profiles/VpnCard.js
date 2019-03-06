@@ -6,12 +6,14 @@ import { connect } from 'react-redux';
 import history from '../../config/history';
 import handleOsIcons from '../../helpers/osIcon';
 import { getProfiles } from '../../actions/userActions';
-import { onProfileDelete, onProfileSelect, setTabProfileView } from '../../actions/profilesActions';
+import {
+  onProfileDelete, onProfileSelect, onSetupVpn, setTabProfileView,
+} from '../../actions/profilesActions';
 
 
 function VpnCard(props) {
   const {
-    onProfileClick, profile, connected, onTabChange, onDelete,
+    onProfileClick, profile, connected, onTabChange, onDelete, onSetup,
   } = props;
 
   function handleButtonClick(e) {
@@ -67,16 +69,20 @@ function VpnCard(props) {
         history.push(`/${profile.id}/view/`);
         break;
       case 'services':
-        onTabChange('2');
+        onTabChange({ tab: '2', selectedProfileID: profile.id });
         history.push(`/${profile.id}/view/`);
         break;
       case 'connect':
-        onTabChange('3');
+        onTabChange({ tab: '3', selectedProfileID: profile.id });
         history.push(`/${profile.id}/view/`);
         break;
       case 'delete':
         onDelete(profile.id);
         console.log(profile.id);
+        break;
+      case 'setup':
+        onSetup(profile);
+        history.push(`/${profile.id}/setup/`);
         break;
       default:
         history.push(`/${profile.id}/view/`);
@@ -153,7 +159,9 @@ const mapDispatchToProps = dispatch => ({
   onDelete: (id) => {
     dispatch(onProfileDelete(id));
   },
-
+  onSetup: (profile) => {
+    dispatch(onSetupVpn(profile));
+  },
 
 });
 

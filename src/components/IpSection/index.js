@@ -1,10 +1,10 @@
 import React from 'react';
 
-import './styles.css';
+
 import { connect } from 'react-redux';
 import { vpnNameChange, vpnOsChange, vpnSubscriptionChange } from '../../actions/profilesActions';
 import { getUserIP } from '../../actions/userActions';
-
+import './styles.css';
 
 class IpSection extends React.Component {
   constructor(props) {
@@ -22,19 +22,22 @@ class IpSection extends React.Component {
     return (
       <div className="ip-section">
 
-        <div className="section-item">
+        <div className="section-item section-item--logo">
           <span className="logo_time">time</span>
           <span className="logo_VPN">VPN</span>
         </div>
-        <div className="section-item">
+        <div className="section-item section-item--status">
           <div className="section_status">
-Your IP:
+                        Your IP:
+              {' '}
             {data.ip}
           </div>
           <div className="section_status">
-              Your Status:
+                        Your Status:
             {' '}
-            {data.protected ? 'Protected' : 'Unprotected' }
+            <span className={data.protected ? 'Protected' : 'Unprotected'}>
+              {data.protected ? 'Protected' : 'Unprotected' }
+            </span>
 
 
           </div>

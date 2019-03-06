@@ -28,6 +28,18 @@ const vpnReducer = (state = initialState, action) => {
         ...state,
         ...action.payload,
       };
+    case ACTIONS.SETUP_VPN:
+      console.log(action.payload);
+      return {
+        ...state,
+        name: action.payload.name,
+        os: action.payload.os,
+        subscription: action.payload.subscription.id,
+        client: action.payload.client,
+        proto: action.payload.proto,
+        port: action.payload.port,
+
+      };
     default:
       return state;
   }

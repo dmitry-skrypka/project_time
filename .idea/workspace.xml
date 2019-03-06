@@ -2,34 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa143726-5a91-4f09-a322-6f6a2aaf54cc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/svg/icons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MainContainer/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/profilesActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/profilesActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/userActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/userActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/IpSection/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/IpSection/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/IpSection/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/IpSection/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MainContainer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainContainer/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profiles/CreateBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profiles/CreateBlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profiles/CreateNewPROXY.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profiles/CreateNewPROXY.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profiles/CreateNewVPN.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profiles/CreateNewVPN.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profiles/SockCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profiles/SockCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profiles/Tags.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profiles/Tags.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profiles/ViewProfileBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profiles/ViewProfileBlock.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profiles/VpnCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profiles/VpnCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profiles/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profiles/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profiles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profiles/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/appConsts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/appConsts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/axiosInstance.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/axiosInstance.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/history.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/history.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/osIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/osIcon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/pingJs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/pingJs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/profilesReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/profilesReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/proxyReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/proxyReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/userReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/userReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/vpnReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/vpnReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sagas/profileSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sagas/profileSaga.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sagas/rootSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sagas/rootSaga.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sagas/userSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sagas/userSaga.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/profileServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/profileServices.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/userServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/userServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -43,100 +34,88 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/services/userServices.js">
+        <entry file="file://$PROJECT_DIR$/src/components/Profiles/CreateNewVPN.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Header/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="869">
-              <caret line="114" column="13" lean-forward="true" selection-start-line="114" selection-start-column="13" selection-end-line="114" selection-end-column="13" />
+            <state relative-caret-position="304">
+              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Header/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
               <folding>
-                <element signature="e#0#30#0" expanded="true" />
+                <element signature="e#0#47#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sagas/userSaga.js">
+        <entry file="file://$PROJECT_DIR$/src/components/IpSection/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1321">
-              <caret line="108" selection-start-line="108" selection-end-line="108" />
+            <state relative-caret-position="451">
+              <caret line="53" column="1" lean-forward="true" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sagas/profileSaga.js">
+        <entry file="file://$PROJECT_DIR$/src/components/IpSection/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="58" column="51" selection-start-line="58" selection-start-column="51" selection-end-line="58" selection-end-column="51" />
+            <state relative-caret-position="513">
+              <caret line="45" column="12" lean-forward="true" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
               <folding>
-                <element signature="e#0#58#0" expanded="true" />
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/services/profileServices.js">
+        <entry file="file://$PROJECT_DIR$/src/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="18" column="64" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="64" />
-              <folding>
-                <element signature="e#0#44#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="280">
+              <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/MainContainer/styles.css">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/reducers/profilesReducer.js">
+        <entry file="file://$PROJECT_DIR$/src/components/MainContainer/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="52" column="40" lean-forward="true" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
+            <state relative-caret-position="171">
+              <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Profiles/CreateBlock.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="113" column="45" selection-start-line="113" selection-start-column="45" selection-end-line="113" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Profiles/VpnCard.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="70" column="45" lean-forward="true" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Profiles/SockCard.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/src/App.css">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Profiles/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1650">
-              <caret line="66" column="1" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Profiles/CreateNewVPN.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="344" selection-start-line="344" selection-end-line="344" />
+            <state relative-caret-position="2109">
+              <caret line="111" column="19" selection-start-line="111" selection-start-column="19" selection-end-line="111" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -173,22 +152,17 @@
         <option value="$PROJECT_DIR$/src/components/NavBar/index.js" />
         <option value="$PROJECT_DIR$/src/components/Header/IpSection.js" />
         <option value="$PROJECT_DIR$/src/components/MenuMarkup/MenuMarkup.js" />
-        <option value="$PROJECT_DIR$/src/components/Header/styles.css" />
         <option value="$PROJECT_DIR$/src/config/history.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/Profiles/ShadowSockCard.js" />
         <option value="$PROJECT_DIR$/src/webpackrc.json" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Header/index.js" />
-        <option value="$PROJECT_DIR$/src/components/IpSection/styles.css" />
         <option value="$PROJECT_DIR$/src/components/Header2/styles.css" />
         <option value="$PROJECT_DIR$/src/components/Header2/index.js" />
-        <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/reducers/authReducer.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/config/store.js" />
         <option value="$PROJECT_DIR$/src/config/rootRouter.js" />
-        <option value="$PROJECT_DIR$/src/components/IpSection/index.js" />
         <option value="$PROJECT_DIR$/src/services/test.js" />
         <option value="$PROJECT_DIR$/src/components/helpers/osIcon.js" />
         <option value="$PROJECT_DIR$/src/components/Profiles/SockCard.js" />
@@ -200,31 +174,37 @@
         <option value="$PROJECT_DIR$/src/components/Profiles/CreateNewPROXY.js" />
         <option value="$PROJECT_DIR$/src/components/Profiles/viewProfileBlock.js" />
         <option value="$PROJECT_DIR$/src/components/Profiles/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Profiles/styles.css" />
-        <option value="$PROJECT_DIR$/src/components/MainContainer/index.js" />
         <option value="$PROJECT_DIR$/src/sagas/userSaga.js" />
         <option value="$PROJECT_DIR$/src/config/axiosInstance.js" />
         <option value="$PROJECT_DIR$/src/components/Profiles/Tags.js" />
         <option value="$PROJECT_DIR$/src/services/userServices.js" />
-        <option value="$PROJECT_DIR$/src/reducers/vpnReducer.js" />
-        <option value="$PROJECT_DIR$/src/components/Profiles/CreateNewVPN.js" />
-        <option value="$PROJECT_DIR$/src/components/Profiles/ViewProfileBlock.js" />
-        <option value="$PROJECT_DIR$/src/config/appConsts.js" />
-        <option value="$PROJECT_DIR$/src/actions/profilesActions.js" />
         <option value="$PROJECT_DIR$/src/sagas/rootSaga.js" />
         <option value="$PROJECT_DIR$/src/sagas/profileSaga.js" />
         <option value="$PROJECT_DIR$/src/services/profileServices.js" />
-        <option value="$PROJECT_DIR$/src/components/Profiles/CreateBlock.js" />
-        <option value="$PROJECT_DIR$/src/components/Profiles/VpnCard.js" />
         <option value="$PROJECT_DIR$/src/reducers/profilesReducer.js" />
+        <option value="$PROJECT_DIR$/src/assets/svg/icons.js" />
+        <option value="$PROJECT_DIR$/src/config/appConsts.js" />
+        <option value="$PROJECT_DIR$/src/actions/profilesActions.js" />
+        <option value="$PROJECT_DIR$/src/reducers/vpnReducer.js" />
+        <option value="$PROJECT_DIR$/src/components/Profiles/VpnCard.js" />
+        <option value="$PROJECT_DIR$/src/components/Profiles/CreateBlock.js" />
+        <option value="$PROJECT_DIR$/src/components/Profiles/ViewProfileBlock.js" />
+        <option value="$PROJECT_DIR$/src/components/Profiles/styles.css" />
+        <option value="$PROJECT_DIR$/src/components/Profiles/CreateNewVPN.js" />
+        <option value="$PROJECT_DIR$/src/components/Header/styles.css" />
+        <option value="$PROJECT_DIR$/src/components/Header/index.js" />
+        <option value="$PROJECT_DIR$/src/components/IpSection/styles.css" />
+        <option value="$PROJECT_DIR$/src/components/IpSection/index.js" />
+        <option value="$PROJECT_DIR$/src/index.css" />
+        <option value="$PROJECT_DIR$/src/components/MainContainer/index.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="184" />
-    <option name="y" value="105" />
-    <option name="width" value="1569" />
-    <option name="height" value="880" />
+    <option name="x" value="224" />
+    <option name="y" value="113" />
+    <option name="width" value="1567" />
+    <option name="height" value="872" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -232,7 +212,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -249,7 +228,40 @@
               <item name="time-vpn" type="b2602c69:ProjectViewProjectNode" />
               <item name="time-vpn" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="time-vpn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="time-vpn" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="time-vpn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="time-vpn" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="svg" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="time-vpn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="time-vpn" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="time-vpn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="time-vpn" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Header" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="time-vpn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="time-vpn" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="IpSection" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="time-vpn" type="b2602c69:ProjectViewProjectNode" />
@@ -269,24 +281,43 @@
               <item name="time-vpn" type="b2602c69:ProjectViewProjectNode" />
               <item name="time-vpn" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="time-vpn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="time-vpn" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="reducers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="time-vpn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="time-vpn" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sagas" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="time-vpn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="time-vpn" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/node_modules/eslint" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Desktop/public" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
-    <property name="node.js.selected.package.eslint" value="W:\WorkProjects\time-vpn\node_modules\eslint" />
-    <property name="node.js.selected.package.standard" value="W:\WorkProjects\time-vpn\node_modules\eslint" />
+    <property name="node.js.selected.package.eslint" value="/usr/lib/node_modules/eslint" />
+    <property name="node.js.selected.package.standard" value="/usr/lib/node_modules/eslint" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -294,17 +325,17 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="W:\WorkProjects\time-vpn\src" />
-      <recent name="W:\WorkProjects\time-vpn\src\components\IpSection" />
-      <recent name="W:\WorkProjects\time-vpn\src\components\NavBar" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/MainContainer" />
       <recent name="$PROJECT_DIR$/src/components/Profiles" />
       <recent name="$PROJECT_DIR$/src/components/Header2" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="W:\WorkProjects\time-vpn\src\components\Profiles" />
-      <recent name="W:\WorkProjects\time-vpn\src\components\MainContainer" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="W:\WorkProjects\time-vpn\src" />
+      <recent name="W:\WorkProjects\time-vpn\src\components\IpSection" />
+      <recent name="W:\WorkProjects\time-vpn\src\components\NavBar" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -345,17 +376,17 @@
       <workItem from="1551427878141" duration="705000" />
       <workItem from="1551443840109" duration="5784000" />
       <workItem from="1551451271104" duration="109000" />
+      <workItem from="1551856345558" duration="15490000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154023000" />
+    <option name="totallyTimeSpent" value="176892000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="224" y="113" width="1567" height="872" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19106218" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -368,8 +399,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="8" weight="0.329718" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.7360379" visible="true" weight="0.3564464" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.26396206" side_tool="true" visible="true" weight="0.3564464" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.9080311" visible="true" weight="0.35436243" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.09196891" side_tool="true" visible="true" weight="0.35436243" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49578503" weight="0.32719395" />
       <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -381,44 +412,10 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Downloads/linux-brands.svg" />
-    <entry file="file://$USER_HOME$/Downloads/android-brands.svg" />
-    <entry file="file://$PROJECT_DIR$/src/.webpackrc.json" />
-    <entry file="file://$PROJECT_DIR$/src/serviceWorker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/.eslintrc.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/IpSection/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Header2/styles.css" />
-    <entry file="file://$PROJECT_DIR$/src/components/Header2/index.js" />
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/IpSection/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -541,29 +538,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-105" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/userActions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Profiles/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="66" column="1" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -581,68 +559,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Profiles/Tags.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="81" column="32" lean-forward="true" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#8#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Profiles/CreateNewPROXY.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="565">
           <caret line="121" column="42" lean-forward="true" selection-start-line="121" selection-start-column="42" selection-end-line="121" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Header/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="57" column="15" selection-start-line="57" selection-start-column="15" selection-end-line="57" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/vpnReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MainContainer/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="31" column="35" lean-forward="true" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/profilesActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1197">
-          <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/appConsts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="35" column="20" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Profiles/ViewProfileBlock.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1539">
-          <caret line="90" column="74" selection-start-line="90" selection-start-column="74" selection-end-line="90" selection-end-column="74" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -661,7 +581,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
+        <state relative-caret-position="361">
           <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
         </state>
       </provider>
@@ -686,10 +606,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../Downloads/mask-solid.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Downloads/user-secret-solid.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/svg11/svg11.rnc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Downloads/globe-americas-solid.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/svg/icons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1387">
+          <caret line="73" column="15" selection-start-line="73" selection-start-column="15" selection-end-line="73" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/services/profileServices.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="18" column="64" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="64" />
+        <state relative-caret-position="456">
+          <caret line="25" column="22" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="22" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
@@ -698,39 +637,143 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sagas/profileSaga.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="58" column="51" selection-start-line="58" selection-start-column="51" selection-end-line="58" selection-end-column="51" />
+        <state relative-caret-position="1653">
+          <caret line="95" column="57" selection-start-line="95" selection-start-column="40" selection-end-line="95" selection-end-column="57" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Profiles/CreateNewVPN.js">
+    <entry file="file://$PROJECT_DIR$/src/reducers/profilesReducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="344" selection-start-line="344" selection-end-line="344" />
+        <state relative-caret-position="114">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Profiles/CreateBlock.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Profiles/Tags.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="113" column="45" selection-start-line="113" selection-start-column="45" selection-end-line="113" selection-end-column="45" />
+        <state relative-caret-position="755">
+          <caret line="67" column="29" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config/appConsts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/profilesActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="61" column="20" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/vpnReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Profiles/VpnCard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="70" column="45" lean-forward="true" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
+        <state relative-caret-position="399">
+          <caret line="84" column="46" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/profilesReducer.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Profiles/CreateBlock.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="52" column="40" lean-forward="true" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
+        <state relative-caret-position="489">
+          <caret line="113" column="1" selection-start-line="113" selection-start-column="1" selection-end-line="113" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Profiles/ViewProfileBlock.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="117" column="13" selection-start-line="117" selection-start-column="13" selection-end-line="117" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Profiles/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2109">
+          <caret line="111" column="19" selection-start-line="111" selection-start-column="19" selection-end-line="111" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Profiles/CreateNewVPN.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Header/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Header/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/IpSection/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="53" column="1" lean-forward="true" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/IpSection/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="45" column="12" lean-forward="true" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MainContainer/styles.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MainContainer/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
