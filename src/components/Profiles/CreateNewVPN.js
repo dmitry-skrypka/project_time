@@ -246,11 +246,11 @@ remaining]
                         </span>
                       </Button>
                     ))}
-                  </div>
                   <div className="create_profile_selectedOs">
-                            OS Selected:
+                            OS Selected:<br />
                     {' '}
                     {os}
+                  </div>
                   </div>
                 </div>
 

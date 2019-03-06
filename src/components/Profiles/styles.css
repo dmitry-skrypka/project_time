@@ -2,13 +2,16 @@
   max-width: 1000px;
   margin: 0 auto;
 }
+
 .bold {
   font-weight: bold;
 }
+
 .create_block_create_new {
   display: flex;
   flex-direction: row;
 }
+
 .create_profile_tab_content_section_wrapper {
   display: flex;
   justify-content: space-around;
@@ -25,9 +28,11 @@
   flex-direction: column;
 }
 
-.ant-layout, .ant-layout * {
+.ant-layout,
+.ant-layout * {
   box-sizing: border-box;
 }
+
 .profile_card_container {
 
   display: flex;
@@ -53,25 +58,30 @@
 .create_profile_header {
   padding-top: 20px;
 }
+
 .create_profile_tab1_container {
-  height: 250px;
+  min-height: 250px;
 }
+
 .create_profile_tab_description {
   text-align: center;
   padding: 10px;
 }
+
 .profile_card_section {
   display: flex;
   flex-direction: column;
   width: 150px;
 }
+
 .ant-btn.create_profile_buttonOs {
   width: 130px;
   height: 90px;
   text-align: center;
   margin: 3px;
 }
-.ant-btn>.create_profile_os_icon_wrapper{
+
+.ant-btn>.create_profile_os_icon_wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -88,9 +98,8 @@
   display: flex;
   justify-content: space-around;
 }
-.create_profile_os_icon_description {
 
-}
+.create_profile_os_icon_description {}
 
 .view_profile_tab_connect {
   text-align: center;
@@ -101,11 +110,12 @@
   padding: 20px;
 }
 
-.view_profile_tab_connect_icon_caption{
+.view_profile_tab_connect_icon_caption {
   background-color: #acacac;
   border-radius: 0.25rem;
   margin-top: 5px;
 }
+
 .view_profile_tab_connect_icons_block {
   display: flex;
   justify-content: space-around;
@@ -121,12 +131,14 @@
   text-align: center;
   padding: 5px;
 }
+
 .view_profile_tab_connect_button_wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.view_profile_tab_connect_button{
+
+.view_profile_tab_connect_button {
   margin: 5px;
 }
 
@@ -147,8 +159,70 @@
   vertical-align: baseline;
   border-radius: 0.25rem;
 }
+
 .view_profile_tab_overview_container {
   text-align: center;
   margin-top: 10px;
 }
 
+/* PROXY */
+.create_profile_tabs_container {
+  width: 66.66%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.create_profile_tab_content_section {
+  margin: 16px 0;
+}
+
+.create_profile_servers_wrapper {
+  margin-top: 6px;
+}
+
+@media (max-width: 992px) {
+  .create_profile_tab1_container {
+    height: auto;
+  }
+
+  .create_profile_tab_content_section_wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .create_profile_tab_content_section_protocol {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .create_profile_selectors_wrapper {
+    margin-bottom: 16px;
+  }
+
+  .create_profile_servers {
+    margin-bottom: 16px;
+  }
+}
+
+/* VPN */
+
+.create_profile_tab1_container {
+  margin-bottom: 16px;
+}
+
+.create_profile_selectedOs {
+  display: inline-block;
+  width: 130px;
+  height: 90px;
+  line-height: 45px;
+  text-align: center;
+  margin: 3px;
+}
+
+.create_profile_buttonOs_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 16px;
+}

@@ -7,6 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #F0F2F5;
 }
 
 code {
@@ -27,6 +28,10 @@ code {
 }
 .ma0 {
   margin: 0 !important;
+}
+
+.ml-5px {
+  margin-left: 5px !important;
 }
 /*.content-header-section {*/
   /*-webkit-box-flex: 0;*/

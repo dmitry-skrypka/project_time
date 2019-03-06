@@ -62,7 +62,7 @@ class Header extends React.Component {
             title={(
               <span className="submenu-title-wrapper header-menu__item-value">
 My account
-                <Icon className="ma0" type="caret-down" />
+                <Icon className="ma0 ml-5px" type="caret-down" />
               </span>
 )}
           >

@@ -64,3 +64,8 @@
 .ant-menu-item-group-list .ant-menu-item {
   padding: 0 14px !important;
 }
+
+.ant-menu-item-group .ant-menu-item-selected:hover,
+.ant-menu-item-group .ant-menu-item-active {
+  background-color: rgba(0, 0, 0, 0.25);
+}
