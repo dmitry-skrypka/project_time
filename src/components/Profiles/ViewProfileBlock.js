@@ -143,7 +143,7 @@ Disable
             <div className="view_profile_tab_container">
               <div className="view_profile_tab_content">
                 <div className="view_profile_tab_content_row">
-                  <Row>
+                  <Row className="view_profile_tab_content_panel">
                     <Col span={18}>
                       <div className="view_profile_tab_connect_wrapper">
                         <div className="view_profile_tab_connect" style={{ backgroundColor: selectedProfile.connect ? '#ecfae8' : '#fae9e8' }}>
