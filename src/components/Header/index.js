@@ -5,6 +5,7 @@ import {
 import React from 'react';
 
 import './styles.css';
+import history from '../../config/history';
 
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
@@ -19,6 +20,14 @@ class Header extends React.Component {
     this.setState({
       current: e.key,
     });
+    switch (e.key) {
+      case 'profiles':
+        history.push('/');
+        break;
+
+      default:
+        history.push('/');
+    }
   };
 
   render() {

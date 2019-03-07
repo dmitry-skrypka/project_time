@@ -36,6 +36,7 @@
   line-height: 1.8;
   padding: 3px;
   margin-left: 2px;
+  cursor: pointer;
 }
 
 .section_status .Unprotected {
@@ -59,4 +60,14 @@
 
 .section-item--logo {
   margin-right: 25px;
+  cursor: pointer;
+}
+.popover_caption_condition {
+padding-top: 20px;
+}
+.popover_content_wrapper {
+  width: 300px;
+}
+.popover_caption {
+  padding-top: 4px;
 }

@@ -7,7 +7,7 @@ import { Bar } from 'react-chartjs-2';
 import moment from 'moment';
 import Tags from './Tags';
 import {
-  getProfileInfo, onProfileDelete, setTabProfileView,
+  getProfileInfo, onProfileDelete, onSetupVpn, setTabProfileView,
 } from '../../actions/profilesActions';
 import history from '../../config/history';
 import {
@@ -40,8 +40,16 @@ class ViewProfileBlock extends React.Component {
   }
 
   viewExtra() {
-    const { onDelete } = this.props;
-    const { selectedProfileID } = this.props.profiles;
+    const { onDelete, onSetup } = this.props;
+    const { selectedProfileID, selectedProfile } = this.props.profiles;
+    const profile = {
+      name: selectedProfile.username,
+      os: selectedProfile.os,
+      subscription: '1110',
+      client: selectedProfile.client_soft,
+      proto: selectedProfile.proto,
+      port: selectedProfile.port,
+    };
     function handleChange(value) {
       switch (value) {
         case 'vpn':
@@ -60,7 +68,7 @@ class ViewProfileBlock extends React.Component {
     }
     return (
       <div style={{ display: 'flex', alignItems: 'center' }}>
-        <Button size="small" type="primary"> Setup new configuration</Button>
+        <Button size="small" type="primary" onClick={() => { onSetup(profile); history.push(`/${selectedProfileID}/setup`); }}> Setup new configuration</Button>
         <Button
           style={{
             marginRight: 20,
@@ -258,6 +266,9 @@ const mapDispatchToProps = dispatch => ({
   },
   onDelete: (id) => {
     dispatch(onProfileDelete(id));
+  },
+  onSetup: (profile) => {
+    dispatch(onSetupVpn(profile));
   },
 
 });
