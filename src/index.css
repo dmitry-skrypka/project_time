@@ -47,3 +47,11 @@ code {
 .header-status {
 }
 /**/
+
+#root {
+  height: calc(100% - 69px);
+}
+
+.main-container.ant-layout {
+  margin-bottom: 70px;
+}
