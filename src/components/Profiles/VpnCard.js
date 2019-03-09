@@ -1,66 +1,70 @@
 import React from 'react';
 import {
-  Icon, Select, Menu, Button, Dropdown,
+  Icon,
+  Select,
+  Menu,
+  Button,
+  Dropdown,
+  Typography,
+  Progress,
+  Badge,
+  Tag,
 } from 'antd';
 import { connect } from 'react-redux';
 import history from '../../config/history';
 import handleOsIcons from '../../helpers/osIcon';
 import { getProfiles } from '../../actions/userActions';
 import {
-  onProfileDelete, onProfileSelect, onSetupVpn, setTabProfileView,
+  onProfileDelete,
+  onProfileSelect,
+  onSetupVpn,
+  setTabProfileView,
 } from '../../actions/profilesActions';
 
-
+const { Text } = Typography;
 function VpnCard(props) {
   const {
-    onProfileClick, profile, connected, onTabChange, onDelete, onSetup,
+    onProfileClick,
+    profile,
+    connected,
+    onTabChange,
+    onDelete,
+    onSetup,
   } = props;
 
   function handleButtonClick(e) {
     console.log('click left button', e);
   }
-
-
+  console.log(profile);
   const menu = (
     <Menu onClick={handleMenuClick}>
       <Menu.Item value="activity">
-
         <Icon type="global" />
-                Activity
-        {' '}
+        Activity
         {' '}
       </Menu.Item>
       <Menu.Item value="services">
-
         <Icon type="profile" />
-                Services
-        {' '}
+        Services
         {' '}
       </Menu.Item>
       <Menu.Item value="connect">
-
         <Icon type="api" />
-                Connect
-        {' '}
+        Connect
         {' '}
       </Menu.Item>
       <Menu.Item value="delete">
-
         <Icon type="delete" theme="twoTone" twoToneColor="#eb2f96" />
-                Delete
-        {' '}
+        Delete
         {' '}
       </Menu.Item>
       <Menu.Item value="setup">
-
         <Icon type="setting" />
-                Setup
-        {' '}
+        Setup
         {' '}
       </Menu.Item>
     </Menu>
   );
-
 
   function handleMenuClick(e) {
     switch (e.item.props.value) {
@@ -94,7 +98,11 @@ function VpnCard(props) {
   }
 
   return (
-    <div className="profile_card_container" onClick={e => handleClick(e, profile.id)}>
+    <div
+      role="button"
+      className="profile_card_container"
+      onClick={e => handleClick(e, profile.id)}
+    >
       <div className="profile_card_section">
         <div>
           <Icon
@@ -103,54 +111,54 @@ function VpnCard(props) {
           />
           <div>{profile.name}</div>
         </div>
-
       </div>
       <div className="profile_card_section">
         <div>Session</div>
-        <div>{connected ? 'Connected' : 'Disconnected'}</div>
+        <div>
+          {profile.disable ? (
+            <Tag color="#ef5350">Disabled</Tag>
+          ) : (
+            <Tag color={profile.connected ? 'green' : '#ababab'}>
+              {profile.connected ? 'Connected' : 'Disconnected'}
+            </Tag>
+          )}
+        </div>
       </div>
       <div className="profile_card_section">
         <div>Billing</div>
-        <div>{profile.subscription.name}</div>
+        <div>
+          <Tag color="#42a5f5">{profile.subscription.name}</Tag>
+        </div>
       </div>
       <div className="profile_card_section">
         <div>{profile.server.name}</div>
-        <div>
-          {profile.server.load.mbits}
-          {' '}
-Mb/s
+        <div style={{ width: 100 }}>
+          <Progress
+            width={50}
+            type="line"
+            percent={profile.server.load.mbits}
+            format={percent => `${percent} Mb/s`}
+          />
         </div>
       </div>
       <div className="profile_card_section">
         <div>Used</div>
-        <div>{profile.online}</div>
+        <div>
+          <Tag color="#42a5f5">{profile.online}</Tag>
+        </div>
       </div>
       <div onClick={e => e.stopPropagation()}>
-        {/* <Select */}
-        {/* style={{ width: 200, zIndex: 300 }} */}
-        {/* placeholder="Actions" */}
-        {/* onChange={handleChange} */}
-
-        {/* > */}
-        {/* <Option value="activity">Activity</Option> */}
-        {/* <Option value="services">Services</Option> */}
-        {/* <Option value="connect">Connect</Option> */}
-        {/* <Option value="setup">Setup</Option> */}
-        {/* <Option value="delete">Delete</Option> */}
-        {/* </Select> */}
         <Dropdown overlay={menu} trigger={['click']}>
           <Button style={{ marginLeft: 8, width: 120 }}>
-                  Actions
+            Actions
             {' '}
             <Icon type="down" />
           </Button>
         </Dropdown>
       </div>
     </div>
-
   );
 }
-
 
 const mapDispatchToProps = dispatch => ({
   onTabChange: (tab) => {
@@ -162,7 +170,9 @@ const mapDispatchToProps = dispatch => ({
   onSetup: (profile) => {
     dispatch(onSetupVpn(profile));
   },
-
 });
 
-export default connect(null, mapDispatchToProps)(VpnCard);
+export default connect(
+  null,
+  mapDispatchToProps,
+)(VpnCard);

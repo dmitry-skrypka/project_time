@@ -13,7 +13,6 @@ import { ShieldSvg } from '../../assets/svg/icons';
 
 const { TabPane } = Tabs;
 
-
 const ShieldIcon = props => <Icon component={ShieldSvg} {...props} />;
 const Title = () => (
   <div className="create_block_create_new">
@@ -29,7 +28,6 @@ const Title = () => (
     </div>
   </div>
 );
-
 
 function More() {
   const { Option } = Select;
@@ -80,31 +78,38 @@ class CreateBlock extends React.Component {
     history.push(`/${id}/view/`);
   }
 
-
   render() {
-    const {
-      profiles, proxies, shadowsocks,
-    } = this.props.profiles;
+    const { profiles, proxies, shadowsocks } = this.props.profiles;
     return (
       <Card
         style={{ width: '100%', margin: 10 }}
         title={<Title />}
         extra={<More />}
       >
-        <Tabs>
+        <Tabs size="small">
           <TabPane tab="Virtual Private Networks" key="1">
             {profiles.length
-              ? profiles.map(profile => <VpnCard key={profile.id} profile={profile} onProfileClick={this.handleProfileClick} />)
+              ? profiles.map(profile => (
+                <VpnCard
+                  key={profile.id}
+                  profile={profile}
+                  onProfileClick={this.handleProfileClick}
+                />
+              ))
               : ' You do not have a VPN profiles. Create a new VPN profile.'}
           </TabPane>
           <TabPane tab="Proxies" key="2">
             {proxies.length
-              ? proxies.map(proxy => <SockCard profile={proxy} key={proxy.id} />)
+              ? proxies.map(proxy => (
+                <SockCard profile={proxy} key={proxy.id} />
+              ))
               : ' You do not have a VPN profiles. Create a new VPN profile.'}
           </TabPane>
           <TabPane tab="Shadowsocks" key="3">
             {shadowsocks.length
-              ? shadowsocks.map(socks => <SockCard profile={socks} key={socks.id} />)
+              ? shadowsocks.map(socks => (
+                <SockCard profile={socks} key={socks.id} />
+              ))
               : ' You do not have a VPN profiles. Create a new VPN profile.'}
           </TabPane>
         </Tabs>
@@ -120,12 +125,14 @@ const mapDispatchToProps = dispatch => ({
   profileSelect: (id) => {
     dispatch(onProfileSelect(id));
   },
-
 });
 const mapStateToProps = state => ({
   profiles: state.profiles,
 });
-export default connect(mapStateToProps, mapDispatchToProps)(CreateBlock);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(CreateBlock);
 
 // CreateBlock.defaultProps = {
 //   profiles: {

@@ -180,6 +180,17 @@
 
 .create_profile_servers_wrapper {
   margin-top: 6px;
+  text-align: center;
+}
+.create_profile_servers_list {
+  display: flex;
+  flex-direction: column;
+
+}
+.server_list_button {
+  margin: 2px;
+  display: flex !important;
+  justify-content: space-between !important;
 }
 
 @media (max-width: 992px) {
@@ -229,11 +240,53 @@
   margin-bottom: 16px;
 }
 
+.view_profile_services_content {
+  padding: 20px;
+}
+.view_profile_services_caption{
+  padding: 20px;
+}
+.view_profile_tab_connect_captions {
+  text-align: left;
+}
+.view_profile_table_action_switch {
+  padding: 20px;
+}
+.table_row td {
+
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+ height: 50px;
+}
+.swap_options_ovpn {
+  text-align: center;
+}
+.caption_title {
+  font-size: 14px;
+
+}
+.swap_options_ikev_caption_section {
+  display: flex;
+  /*justify-content:  space-evenly;*/
+}
+.taR {
+  text-align: right;
+}
+.code_config_caption {
+  width: 150px;
+}
+@media  (max-width: 940px){
+  .ant-row-flex {
+    flex-wrap: nowrap !important;
+  }
+}
 @media (max-width: 768px) {
   .profile_card_container {
     flex-wrap: wrap;
   }
-
+  .header-container {
+    display: none;
+  }
   .profile_card_container .ant-btn.ant-dropdown-trigger {
     margin: 0 !important;
   }

@@ -93,4 +93,30 @@ function* deleteProfileById(action) {
   }
 }
 
-export { createProfile, getProfileById, deleteProfileById };
+function* downloadConfig(action) {
+  try {
+    yield put({
+      type: ACTIONS.DOWNLOAD_START,
+    });
+
+    const id = action.payload;
+    console.log(action.payload)
+    const file = yield call(ProfileService.downloadConfigFile, id);
+
+    yield put({
+      type: ACTIONS.DOWNLOAD_DONE,
+
+
+    });
+    console.log(file);
+  } catch (e) {
+    yield put({
+      type: ACTIONS.DOWNLOAD_FAIL,
+
+    });
+  }
+}
+
+export {
+  createProfile, getProfileById, deleteProfileById, downloadConfig,
+};

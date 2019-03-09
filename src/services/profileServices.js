@@ -15,7 +15,6 @@ class ProfileService {
 
 
   static getProfile(id) {
-    console.log('sss');
     return axios(`${appConsts.BACKEND_URL}/app/v1/profile/${id}/`, {
       method: 'GET',
       withCredentials: true,
@@ -31,6 +30,24 @@ class ProfileService {
       params: {
         profile_id: id,
       },
+    });
+  }
+
+  static downloadConfigFile(id) {
+    return axios(`${appConsts.BACKEND_URL}/app/v1/config/${id}/`, {
+      method: 'GET',
+      withCredentials: true,
+
+    }).then((response) => {
+      console.log(response)
+      const url = window.URL.createObjectURL(new Blob([response.config]));
+      const link = document.createElement('a');
+      link.href = url;
+      const fileName = 'test.txt';// whatever your file name .
+      link.setAttribute('download', fileName);
+      document.body.appendChild(link);
+      link.click();
+      link.remove();// you need to remove that elelment which is created before.
     });
   }
 }

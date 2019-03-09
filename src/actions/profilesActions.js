@@ -57,6 +57,10 @@ const onSetupVpn = profile => ({
   type: ACTIONS.SETUP_VPN,
   payload: profile,
 });
+const onDownload = id => ({
+  type: ACTIONS.DOWNLOAD,
+  payload: id,
+});
 export {
   vpnNameChange,
   vpnSelectorChange,
@@ -71,4 +75,5 @@ export {
   setTabProfileView,
   onProfileDelete,
   onSetupVpn,
+  onDownload,
 };
