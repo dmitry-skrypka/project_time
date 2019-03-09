@@ -1,20 +1,11 @@
 import React from 'react';
 import {
-  Icon,
-  Select,
-  Menu,
-  Button,
-  Dropdown,
-  Typography,
-  Progress,
-  Badge,
-  Tag,
-  Tooltip, Divider,
+  Icon, Menu, Button, Dropdown, Typography, Progress, Tag,
 } from 'antd';
 import { connect } from 'react-redux';
 import history from '../../config/history';
 import handleOsIcons from '../../helpers/osIcon';
-import { getProfiles } from '../../actions/userActions';
+
 import {
   onProfileDelete,
   onProfileSelect,
@@ -23,20 +14,16 @@ import {
 } from '../../actions/profilesActions';
 import ProfileCardTags from './ProfileCardTags';
 
-const { Text } = Typography;
 function VpnCard(props) {
   const {
     onProfileClick,
     profile,
-    connected,
+
     onTabChange,
     onDelete,
     onSetup,
   } = props;
 
-  function handleButtonClick(e) {
-    console.log('click left button', e);
-  }
   console.log(profile);
   const menu = (
     <Menu onClick={handleMenuClick}>
@@ -107,13 +94,11 @@ function VpnCard(props) {
       <div className="profile_card_container">
         <div className="profile_card_section">
           <div className="profile_card_section_name">
-
             <Icon
               style={{ fontSize: 35 }}
               component={handleOsIcons(profile.os)}
             />
             <div style={{ paddingLeft: 5 }}>{profile.name}</div>
-
           </div>
         </div>
         <div className="profile_card_section">
@@ -165,8 +150,7 @@ function VpnCard(props) {
         <div className="profile_card_section_tags">
           <ProfileCardTags tags={profile.tags} />
         </div>
-      ) : null }
-
+      ) : null}
     </div>
   );
 }
