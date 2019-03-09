@@ -36,28 +36,37 @@
 
 .profile_card_container {
   display: flex;
-  padding: 20px;
+  padding: 10px 20px 5px;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  box-shadow: none;
-  border: 1px solid #eaecee;
+
   color: #575757;
   font-weight: normal;
+}
+.profile_card {
+  margin: 5px;
+  border: 1px solid #eaecee;
+  box-shadow: none;
   -webkit-transition: all 0.12s ease-out;
   transition: all 0.12s ease-out;
-  margin: 5px;
   cursor: pointer;
 }
-
-.profile_card_container:hover {
+.profile_card:hover {
   box-shadow: 0 0 3px #dee2e5;
   opacity: 1;
 }
-
+.profile_card_section_tags {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  border-top: 1px solid #eaecee;
+}
 .create_profile_header {
   padding-top: 20px;
 }
-
+.profile_card_section_name {
+  display: flex;
+}
 .create_profile_tab1_container {
   min-height: 250px;
 }
@@ -161,7 +170,9 @@
   text-align: center;
   margin-top: 10px;
 }
-
+.view_actions_connect {
+  padding-left: 45px;
+}
 /* PROXY */
 .create_profile_tabs_container {
   width: 66.66%;
@@ -242,6 +253,7 @@
 }
 .view_profile_tab_connect_captions {
   text-align: left;
+  padding-left: 45px;
 }
 .view_profile_table_action_switch {
   padding: 20px;

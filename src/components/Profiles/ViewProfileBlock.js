@@ -252,7 +252,7 @@ Disable
 
     const IpData = selectedProfile.switch_ips.ips;
     return (
-      <Card style={{ margin: 10 }}>
+      <Card style={{ margin: '10px auto', maxWidth: 1000 }}>
         <div>
           <Row>
             <Col span={8}>

@@ -9,6 +9,7 @@ import {
   Progress,
   Badge,
   Tag,
+  Tooltip, Divider,
 } from 'antd';
 import { connect } from 'react-redux';
 import history from '../../config/history';
@@ -20,6 +21,7 @@ import {
   onSetupVpn,
   setTabProfileView,
 } from '../../actions/profilesActions';
+import ProfileCardTags from './ProfileCardTags';
 
 const { Text } = Typography;
 function VpnCard(props) {
@@ -96,66 +98,76 @@ function VpnCard(props) {
     e.stopPropagation();
     onProfileClick(id);
   }
-
+  console.log(profile);
   return (
     <div
       role="button"
-      className="profile_card_container"
       onClick={e => handleClick(e, profile.id)}
+      className="profile_card"
     >
-      <div className="profile_card_section">
-        <div>
-          <Icon
-            style={{ fontSize: 20 }}
-            component={handleOsIcons(profile.os)}
-          />
-          <div>{profile.name}</div>
+      <div className="profile_card_container">
+        <div className="profile_card_section">
+          <div className="profile_card_section_name">
+
+            <Icon
+              style={{ fontSize: 35 }}
+              component={handleOsIcons(profile.os)}
+            />
+            <div style={{ paddingLeft: 5 }}>{profile.name}</div>
+
+          </div>
+        </div>
+        <div className="profile_card_section">
+          <div>Session</div>
+          <div>
+            {profile.disable ? (
+              <Tag color="#ef5350">Disabled</Tag>
+            ) : (
+              <Tag color={profile.connected ? 'green' : '#ababab'}>
+                {profile.connected ? 'Connected' : 'Disconnected'}
+              </Tag>
+            )}
+          </div>
+        </div>
+        <div className="profile_card_section">
+          <div>Billing</div>
+          <div>
+            <Tag color="#42a5f5">{profile.subscription.name}</Tag>
+          </div>
+        </div>
+        <div className="profile_card_section">
+          <div>{profile.server.name}</div>
+          <div style={{ width: 100 }}>
+            <Progress
+              width={50}
+              type="line"
+              percent={profile.server.load.mbits}
+              format={percent => `${percent} Mb/s`}
+            />
+          </div>
+        </div>
+        <div className="profile_card_section">
+          <div>Used</div>
+          <div>
+            <Tag color="#42a5f5">{profile.online}</Tag>
+          </div>
+        </div>
+        <div onClick={e => e.stopPropagation()}>
+          <Dropdown overlay={menu} trigger={['click']}>
+            <Button style={{ marginLeft: 8, width: 120 }}>
+              Actions
+              {' '}
+              <Icon type="down" />
+            </Button>
+          </Dropdown>
         </div>
       </div>
-      <div className="profile_card_section">
-        <div>Session</div>
-        <div>
-          {profile.disable ? (
-            <Tag color="#ef5350">Disabled</Tag>
-          ) : (
-            <Tag color={profile.connected ? 'green' : '#ababab'}>
-              {profile.connected ? 'Connected' : 'Disconnected'}
-            </Tag>
-          )}
+      {profile.tags.length > 0 ? (
+        <div className="profile_card_section_tags">
+          <ProfileCardTags tags={profile.tags} />
         </div>
-      </div>
-      <div className="profile_card_section">
-        <div>Billing</div>
-        <div>
-          <Tag color="#42a5f5">{profile.subscription.name}</Tag>
-        </div>
-      </div>
-      <div className="profile_card_section">
-        <div>{profile.server.name}</div>
-        <div style={{ width: 100 }}>
-          <Progress
-            width={50}
-            type="line"
-            percent={profile.server.load.mbits}
-            format={percent => `${percent} Mb/s`}
-          />
-        </div>
-      </div>
-      <div className="profile_card_section">
-        <div>Used</div>
-        <div>
-          <Tag color="#42a5f5">{profile.online}</Tag>
-        </div>
-      </div>
-      <div onClick={e => e.stopPropagation()}>
-        <Dropdown overlay={menu} trigger={['click']}>
-          <Button style={{ marginLeft: 8, width: 120 }}>
-            Actions
-            {' '}
-            <Icon type="down" />
-          </Button>
-        </Dropdown>
-      </div>
+      ) : null }
+
     </div>
   );
 }
