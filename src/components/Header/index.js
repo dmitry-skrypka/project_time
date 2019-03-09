@@ -42,35 +42,23 @@ class Header extends React.Component {
           <Menu.Item key="profiles" className="header-menu__item">
             <span className="header-menu__item-value">Profiles</span>
           </Menu.Item>
-          <Menu.Item
-            key="servers"
-            className="header-menu__item"
-          >
+          <Menu.Item key="servers" className="header-menu__item">
             <span className="header-menu__item-value">Servers</span>
           </Menu.Item>
-          <Menu.Item
-            key="billing"
-            className="header-menu__item"
-          >
+          <Menu.Item key="billing" className="header-menu__item">
             <span className="header-menu__item-value">Billing</span>
           </Menu.Item>
-          <Menu.Item
-            key="subscriptions"
-            className="header-menu__item"
-          >
+          <Menu.Item key="subscriptions" className="header-menu__item">
             <span className="header-menu__item-value">Subscriptions</span>
           </Menu.Item>
-          <Menu.Item
-            key="helpdesk"
-            className="header-menu__item"
-          >
+          <Menu.Item key="helpdesk" className="header-menu__item">
             <span className="header-menu__item-value">Helpdesk</span>
           </Menu.Item>
           <SubMenu
             className="my-account"
             title={(
               <span className="submenu-title-wrapper header-menu__item-value">
-My account
+                My account
                 <Icon className="ma0 ml-5px" type="caret-down" />
               </span>
 )}
@@ -78,15 +66,15 @@ My account
             <MenuItemGroup>
               <Menu.Item key="setting:1">
                 <Icon type="star" theme="filled" />
-Settings
+                Settings
               </Menu.Item>
               <Menu.Item key="setting:2">
                 <Icon type="qrcode" />
-QR-Code
+                QR-Code
               </Menu.Item>
               <Menu.Item key="setting:3">
                 <Icon type="logout" />
-Log out
+                Log out
               </Menu.Item>
             </MenuItemGroup>
           </SubMenu>

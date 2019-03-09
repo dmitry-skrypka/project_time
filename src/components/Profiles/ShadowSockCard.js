@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 function SockCard(props) {
   return (
     <div className="profile_card_container">

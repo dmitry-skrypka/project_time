@@ -1,15 +1,19 @@
-import {
-  takeLatest, takeEvery, take,
-} from 'redux-saga/effects';
+import { takeLatest, takeEvery, take } from 'redux-saga/effects';
 
 import AppConsts from '../config/appConsts';
 import {
-  getUserIP, getProfileList, getSubscriptions, getServers, getServerPing,
+  getUserIP,
+  getProfileList,
+  getSubscriptions,
+  getServers,
+  getServerPing,
 } from './userSaga';
 import {
-  createProfile, deleteProfileById, getProfileById, downloadConfig,
+  createProfile,
+  deleteProfileById,
+  getProfileById,
+  downloadConfig,
 } from './profileSaga';
-
 
 const { ACTIONS } = AppConsts;
 

@@ -15,16 +15,13 @@ function* getUserIP() {
     });
     const ip = yield call(UserService.getIP);
 
-
     yield put({
       type: ACTIONS.USER_GET_IP_DONE,
       payload: ip,
-
     });
   } catch (e) {
     yield put({
       type: ACTIONS.USER_GET_IP_FAIL,
-
     });
   }
 }
@@ -38,12 +35,10 @@ function* getProfileList() {
     yield put({
       type: ACTIONS.USER_GET_PROFILES_DONE,
       payload: profiles,
-
     });
   } catch (e) {
     yield put({
       type: ACTIONS.USER_GET_PROFILES_FAIL,
-
     });
   }
 }
@@ -57,12 +52,10 @@ function* getSubscriptions() {
     yield put({
       type: ACTIONS.USER_GET_SUBSCRIPTIONS_DONE,
       payload: subscriptions.data,
-
     });
   } catch (e) {
     yield put({
       type: ACTIONS.USER_GET_PROFILES_FAIL,
-
     });
   }
 }
@@ -77,12 +70,10 @@ function* getServers() {
     yield put({
       type: ACTIONS.USER_GET_SERVERS_DONE,
       payload: servers,
-
     });
   } catch (e) {
     yield put({
       type: ACTIONS.USER_GET_SERVERS_FAIL,
-
     });
   }
 }
@@ -93,30 +84,33 @@ function* getServerPing(action) {
       type: ACTIONS.USER_GET_SERVER_PING_START,
     });
 
-    const responses = yield all(servers.map(server => call(function* () {
-      try {
-        return yield call(UserService.getServerPing, server);
-      } catch (err) {
-        return { err };
-      }
-    })));
+    const responses = yield all(
+      servers.map(server => call(function* () {
+        try {
+          return yield call(UserService.getServerPing, server);
+        } catch (err) {
+          return { err };
+        }
+      })),
+    );
 
     const pings = yield all(responses.map(response => response));
 
     yield put({
       type: ACTIONS.USER_GET_SERVER_PING_DONE,
       payload: pings.sort((a, b) => a.ping - b.ping),
-
     });
   } catch (e) {
     yield put({
       type: ACTIONS.USER_GET_SERVER_PING_FAIL,
-
-
     });
   }
 }
 
 export {
-  getUserIP, getProfileList, getSubscriptions, getServers, getServerPing,
+  getUserIP,
+  getProfileList,
+  getSubscriptions,
+  getServers,
+  getServerPing,
 };

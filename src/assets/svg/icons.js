@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const ShieldSvg = () => (
   <svg
     aria-hidden="true"
@@ -82,4 +81,6 @@ const GlobeSvg = () => (
     />
   </svg>
 );
-export { ShieldSvg, MaskSvg, SecretSvg, GlobeSvg };
+export {
+  ShieldSvg, MaskSvg, SecretSvg, GlobeSvg,
+};

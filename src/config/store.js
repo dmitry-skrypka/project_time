@@ -5,7 +5,6 @@ import storage from 'redux-persist/lib/storage';
 import rootReducer from '../reducers';
 import rootSaga from '../sagas/rootSaga';
 
-
 const persistConfig = {
   key: 'root',
   storage,

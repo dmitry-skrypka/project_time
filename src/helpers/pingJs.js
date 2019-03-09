@@ -19,13 +19,14 @@ function http_ping(hostname, server_id, name, location, total, choose) {
 
   console.log(`HTTP ping for ${hostname}`);
 
-
   const ping_loop = setInterval(() => {
     // let's change non-existent URL each time to avoid possible side effect with web proxy-cache software on the line
     // url = "http://" + hostname + "/ping/" + Math.random().toString(36).substring(7);
     const set_port = ':100';
     // if (choose === true) {set_port = ':444'}
-    const url = `//${hostname}${set_port}/ping/?${Math.random().toString(36).substring(7)}`;
+    const url = `//${hostname}${set_port}/ping/?${Math.random()
+      .toString(36)
+      .substring(7)}`;
 
     if (i < MAX_ITERATIONS) {
       let delta_time;
@@ -39,7 +40,8 @@ function http_ping(hostname, server_id, name, location, total, choose) {
 
       ping.timeout = REQUEST_TIMEOUT; // it could happen that the request takes a very long time
 
-      ping.onreadystatechange = function () { // the request has returned something, let's log it (starting after the first one)
+      ping.onreadystatechange = function () {
+        // the request has returned something, let's log it (starting after the first one)
         if (ping.readyState === 4 && TIMEOUT_ERROR === 0) {
           over_flag--;
 
@@ -58,7 +60,6 @@ function http_ping(hostname, server_id, name, location, total, choose) {
           }
         }
       };
-
 
       ping.ontimeout = function () {
         TIMEOUT_ERROR = 1;

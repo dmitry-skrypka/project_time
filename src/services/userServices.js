@@ -103,17 +103,24 @@ class UserService {
     // http_ping(server.hostname)
     const start = Date.now();
     let end;
-    return axios(`https://${server.hostname}:444/ping/?${Math.random().toString(36).substring(7)}`, {
-      method: 'GET',
-      timeout: 2000,
-    }).then(() => {
-      // if (response.status === 200) {
-      end = Date.now() - start;
-      return { ...server, ping: end };
-      // }
-    }).catch((error) => {
-      console.log(error);
-    });
+    return axios(
+      `https://${server.hostname}:444/ping/?${Math.random()
+        .toString(36)
+        .substring(7)}`,
+      {
+        method: 'GET',
+        timeout: 2000,
+      },
+    )
+      .then(() => {
+        // if (response.status === 200) {
+        end = Date.now() - start;
+        return { ...server, ping: end };
+        // }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
     // web-pingjs
     // return ping(`https://${server.hostname}:444/ping/?${Math.random()}`)
     // }, TIME_PERIOD);

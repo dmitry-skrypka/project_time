@@ -38,7 +38,6 @@ const vpnReducer = (state = initialState, action) => {
         client: action.payload.client,
         proto: action.payload.proto,
         port: action.payload.port,
-
       };
     default:
       return state;

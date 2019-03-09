@@ -35,7 +35,6 @@
 }
 
 .profile_card_container {
-
   display: flex;
   padding: 20px;
   -webkit-justify-content: space-between;
@@ -44,11 +43,10 @@
   border: 1px solid #eaecee;
   color: #575757;
   font-weight: normal;
-  -webkit-transition: all .12s ease-out;
-  transition: all .12s ease-out;
+  -webkit-transition: all 0.12s ease-out;
+  transition: all 0.12s ease-out;
   margin: 5px;
   cursor: pointer;
-
 }
 
 .profile_card_container:hover {
@@ -82,12 +80,11 @@
   margin: 3px;
 }
 
-.ant-btn>.create_profile_os_icon_wrapper {
+.ant-btn > .create_profile_os_icon_wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-
 }
 
 .create_profile_tab_content_section_os {
@@ -95,12 +92,12 @@
 }
 
 .create_profile_tab_content_section_protocol {
-
   display: flex;
   justify-content: space-around;
 }
 
-.create_profile_os_icon_description {}
+.create_profile_os_icon_description {
+}
 
 .view_profile_tab_connect {
   text-align: center;
@@ -124,7 +121,6 @@
   margin-top: 10px;
 }
 
-
 .view_profile_tab_connect_icon_wrapper {
   justify-content: center;
   display: flex;
@@ -147,7 +143,6 @@
 .badge_blue {
   color: #fff;
   background-color: #42a5f5;
-
 }
 
 .view_profile_badge {
@@ -185,7 +180,6 @@
 .create_profile_servers_list {
   display: flex;
   flex-direction: column;
-
 }
 .server_list_button {
   margin: 2px;
@@ -243,7 +237,7 @@
 .view_profile_services_content {
   padding: 20px;
 }
-.view_profile_services_caption{
+.view_profile_services_caption {
   padding: 20px;
 }
 .view_profile_tab_connect_captions {
@@ -253,17 +247,15 @@
   padding: 20px;
 }
 .table_row td {
-
   padding-top: 5px !important;
   padding-bottom: 5px !important;
- height: 50px;
+  height: 50px;
 }
 .swap_options_ovpn {
   text-align: center;
 }
 .caption_title {
   font-size: 14px;
-
 }
 .swap_options_ikev_caption_section {
   display: flex;
@@ -275,7 +267,7 @@
 .code_config_caption {
   width: 150px;
 }
-@media  (max-width: 940px){
+@media (max-width: 940px) {
   .ant-row-flex {
     flex-wrap: nowrap !important;
   }
@@ -304,7 +296,6 @@
     flex-basis: 50%;
   }
 }
-
 
 /* CHART */
 

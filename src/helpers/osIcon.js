@@ -98,46 +98,28 @@ const routers = () => (
   </svg>
 );
 
-
 const IconWin = props => <Icon component={win} {...props} />;
 const IconMac = props => <Icon component={mac} {...props} />;
 const IconLinux = props => <Icon component={linux} {...props} />;
 const IconRouters = props => <Icon component={routers} {...props} />;
 const IconAndroid = props => <Icon component={android} {...props} />;
 
-
 const handleOsIcon = (value) => {
   switch (value) {
     case 'win':
     case 'win_phone':
-      return (
-        IconWin
-
-      );
+      return IconWin;
     case 'mac':
     case 'ios':
-      return (
-        IconMac
-
-      );
+      return IconMac;
     case 'routers':
-      return (
-        IconRouters
-
-      );
+      return IconRouters;
     case 'android':
-      return (
-        IconAndroid
-
-      );
+      return IconAndroid;
     case 'linux':
-      return (
-        IconLinux
-
-      );
+      return IconLinux;
     default:
-
-      return (IconRouters);
+      return IconRouters;
   }
 };
 

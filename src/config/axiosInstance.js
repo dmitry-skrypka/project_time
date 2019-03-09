@@ -11,14 +11,13 @@ function readCookie(name) {
   return null;
 }
 
-
 const sessionId = readCookie('sessionid');
 
 const axiosInstance = axios.create({
-
-  Cookie: sessionId || 'sessionid=w5vrpjbakv53k1abu7uirb0bo40dwzmh; path=/; domain=.site.devtime.pw; Expires=Tue, 19 Jan 2038 03:14:07 GMT;',
+  Cookie:
+    sessionId
+    || 'sessionid=w5vrpjbakv53k1abu7uirb0bo40dwzmh; path=/; domain=.site.devtime.pw; Expires=Tue, 19 Jan 2038 03:14:07 GMT;',
   // withCredentials: true,
 });
-
 
 export default axiosInstance;

@@ -1,6 +1,4 @@
-import {
-  call, put, select,
-} from 'redux-saga/effects';
+import { call, put, select } from 'redux-saga/effects';
 import { message } from 'antd';
 import history from '../config/history';
 import appConsts from '../config/appConsts';
@@ -20,14 +18,16 @@ function* createProfile() {
       client, name, os, port, proto, subscription, server,
     } = state.vpn;
     const server_id = server;
-    const createProfileResponse = yield call(ProfileService.createProfile,
+    const createProfileResponse = yield call(
+      ProfileService.createProfile,
       client,
       name,
       os,
       port,
       proto,
       subscription,
-      server_id);
+      server_id,
+    );
 
     if (createProfileResponse.status === 200) {
       message.success('Profile Created');
@@ -42,11 +42,9 @@ function* createProfile() {
   } catch (e) {
     yield put({
       type: ACTIONS.CREATE_PROFILE_FAIL,
-
     });
   }
 }
-
 
 function* getProfileById(action) {
   try {
@@ -61,12 +59,10 @@ function* getProfileById(action) {
     yield put({
       type: ACTIONS.GET_PROFILE_INFO_DONE,
       payload: profile.data.profile,
-
     });
   } catch (e) {
     yield put({
       type: ACTIONS.GET_PROFILE_INFO_FAIL,
-
     });
   }
 }
@@ -82,13 +78,10 @@ function* deleteProfileById(action) {
 
     yield put({
       type: ACTIONS.DELETE_PROFILE_DONE,
-
-
     });
   } catch (e) {
     yield put({
       type: ACTIONS.DELETE_PROFILE_FAIL,
-
     });
   }
 }
@@ -100,19 +93,16 @@ function* downloadConfig(action) {
     });
 
     const id = action.payload;
-    console.log(action.payload)
+    console.log(action.payload);
     const file = yield call(ProfileService.downloadConfigFile, id);
 
     yield put({
       type: ACTIONS.DOWNLOAD_DONE,
-
-
     });
     console.log(file);
   } catch (e) {
     yield put({
       type: ACTIONS.DOWNLOAD_FAIL,
-
     });
   }
 }

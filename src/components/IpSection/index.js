@@ -1,8 +1,11 @@
 import React from 'react';
 
-
 import { connect } from 'react-redux';
-import { vpnNameChange, vpnOsChange, vpnSubscriptionChange } from '../../actions/profilesActions';
+import {
+  vpnNameChange,
+  vpnOsChange,
+  vpnSubscriptionChange,
+} from '../../actions/profilesActions';
 import { getUserIP } from '../../actions/userActions';
 import './styles.css';
 import { Popover } from 'antd';
@@ -12,7 +15,6 @@ class IpSection extends React.Component {
   constructor(props) {
     super(props);
   }
-
 
   componentDidMount() {
     const { onGetIp } = this.props;
@@ -29,12 +31,10 @@ class IpSection extends React.Component {
             <span>Country:</span>
             {' '}
             <span style={{ fontWeight: 600 }}>
-
               {delve(data.city, 'country_name', '')}
 ,
               {' '}
               {delve(data.city, 'city', '')}
-
             </span>
           </div>
           <div className="popover_caption">
@@ -49,30 +49,31 @@ class IpSection extends React.Component {
           </div>
 
           <div className="popover_caption_condition">
-            {data.protected ? <span style={{ color: '#ef5350' }}>Protected</span> : <span style={{ color: '#ef5350' }}>To hide your IP address, you need connect to one of the servers.</span>}
-
+            {data.protected ? (
+              <span style={{ color: '#ef5350' }}>Protected</span>
+            ) : (
+              <span style={{ color: '#ef5350' }}>
+                To hide your IP address, you need connect to one of the servers.
+              </span>
+            )}
           </div>
         </div>
         {' '}
-
       </div>
     );
   }
-
 
   render() {
     const { data } = this.props.user;
     return (
       <div className="ip-section">
-
         <div className="section-item section-item--logo">
           <span className="logo_time">time</span>
           <span className="logo_VPN">VPN</span>
         </div>
         <div className="section-item section-item--status">
           <div className="section_status">
-                        Your IP:
-            {' '}
+Your IP:
             {data.ip}
           </div>
           <Popover content={this.popoverContent()}>
@@ -80,17 +81,12 @@ class IpSection extends React.Component {
               Your Status:
               {' '}
               <span className={data.protected ? 'Protected' : 'Unprotected'}>
-                {data.protected ? 'Protected' : 'Unprotected' }
+                {data.protected ? 'Protected' : 'Unprotected'}
               </span>
-
-
             </div>
           </Popover>
-
         </div>
-
       </div>
-
     );
   }
 }
@@ -99,9 +95,11 @@ const mapDispatchToProps = dispatch => ({
   onGetIp: () => {
     dispatch(getUserIP());
   },
-
 });
 const mapStateToProps = state => ({
   user: state.user,
 });
-export default connect(mapStateToProps, mapDispatchToProps)(IpSection);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(IpSection);

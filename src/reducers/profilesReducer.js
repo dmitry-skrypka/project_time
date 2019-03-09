@@ -2,7 +2,6 @@ import appConsts from '../config/appConsts';
 
 const { ACTIONS } = appConsts;
 
-
 const initialState = {
   selectedTab: '1',
   selectedProfileID: '',
@@ -47,13 +46,11 @@ const profilesReducer = (state = initialState, action) => {
       };
 
     case ACTIONS.GET_PROFILE_INFO_DONE:
-
       return {
         ...state,
         selectedProfile: action.payload,
       };
     case ACTIONS.SET_TAB:
-
       return {
         ...state,
         selectedTab: action.payload.tab,

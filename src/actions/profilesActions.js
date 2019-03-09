@@ -1,6 +1,5 @@
 import appConsts from '../config/appConsts';
 
-
 const { ACTIONS } = appConsts;
 
 const vpnNameChange = name => ({
@@ -19,7 +18,6 @@ const vpnOsChange = os => ({
 const createVpn = () => ({
   type: ACTIONS.CREATE_PROFILE,
 });
-
 
 const proxyNameChange = name => ({
   type: ACTIONS.CREATE_PROXY_NAME_CHANGE,

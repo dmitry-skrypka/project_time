@@ -19,7 +19,7 @@ function SockCard(props) {
         <div>
           {props.profile.server.load.mbits}
           {' '}
-                Mb/s
+Mb/s
         </div>
       </div>
 

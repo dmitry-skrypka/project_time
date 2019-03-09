@@ -5,7 +5,6 @@
   flex: 0 0 auto;
   flex-wrap: nowrap;
   flex-direction: row;
-
 }
 
 .section-item {
@@ -23,12 +22,13 @@
 
 .logo_VPN {
   color: #42a5f5;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   text-align: left;
-
 }
 
 .section_status {
@@ -63,7 +63,7 @@
   cursor: pointer;
 }
 .popover_caption_condition {
-padding-top: 20px;
+  padding-top: 20px;
 }
 .popover_content_wrapper {
   width: 300px;
