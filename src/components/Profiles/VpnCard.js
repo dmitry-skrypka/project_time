@@ -98,7 +98,6 @@ function VpnCard(props) {
     e.stopPropagation();
     onProfileClick(id);
   }
-  console.log(profile);
   return (
     <div
       role="button"
