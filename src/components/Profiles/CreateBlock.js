@@ -5,8 +5,7 @@ import {
 
 import { connect } from 'react-redux';
 import history from '../../config/history';
-import VpnCard from './VpnCard';
-import SockCard from './SockCard';
+import ProfileCard from './ProfileCard';
 import { getProfiles } from '../../actions/userActions';
 import { onProfileSelect } from '../../actions/profilesActions';
 import { ShieldSvg } from '../../assets/svg/icons';
@@ -72,10 +71,21 @@ class CreateBlock extends React.Component {
     onGetProfiles();
   }
 
-  handleProfileClick(id) {
+  handleProfileClick(id, type) {
     const { profileSelect } = this.props;
-    profileSelect(id);
-    history.push(`/${id}/view/`);
+    switch (type) {
+      case 'proxy':
+        profileSelect({ id, type: 'proxy' });
+        history.push(`/${id}/view/`);
+        break;
+      case 'shadowsock':
+        profileSelect({ id, type: 'shadowsock' });
+        history.push(`/${id}/view/`);
+        break;
+      default:
+        profileSelect({ id, type: 'vpn' });
+        history.push(`/${id}/view/`);
+    }
   }
 
   render() {
@@ -90,10 +100,11 @@ class CreateBlock extends React.Component {
           <TabPane tab="Virtual Private Networks" key="1">
             {profiles.length
               ? profiles.map(profile => (
-                <VpnCard
+                <ProfileCard
                   key={profile.id}
                   profile={profile}
                   onProfileClick={this.handleProfileClick}
+                  type="vpn"
                 />
               ))
               : ' You do not have a VPN profiles. Create a new VPN profile.'}
@@ -101,14 +112,14 @@ class CreateBlock extends React.Component {
           <TabPane tab="Proxies" key="2">
             {proxies.length
               ? proxies.map(proxy => (
-                <SockCard profile={proxy} key={proxy.id} />
+                <ProfileCard profile={proxy} key={proxy.id} type="proxy" onProfileClick={this.handleProfileClick} />
               ))
               : ' You do not have a VPN profiles. Create a new VPN profile.'}
           </TabPane>
           <TabPane tab="Shadowsocks" key="3">
             {shadowsocks.length
               ? shadowsocks.map(socks => (
-                <SockCard profile={socks} key={socks.id} />
+                <ProfileCard profile={socks} key={socks.id} type="shadowsock" onProfileClick={this.handleProfileClick} />
               ))
               : ' You do not have a VPN profiles. Create a new VPN profile.'}
           </TabPane>
@@ -122,8 +133,8 @@ const mapDispatchToProps = dispatch => ({
   onGetProfiles: () => {
     dispatch(getProfiles());
   },
-  profileSelect: (id) => {
-    dispatch(onProfileSelect(id));
+  profileSelect: (profile) => {
+    dispatch(onProfileSelect(profile));
   },
 });
 const mapStateToProps = state => ({

@@ -47,9 +47,9 @@ const onProfileDelete = id => ({
   type: ACTIONS.DELETE_PROFILE,
   payload: id,
 });
-const onProfileSelect = id => ({
+const onProfileSelect = profile => ({
   type: ACTIONS.PROFILE_SELECTED,
-  payload: id,
+  payload: profile,
 });
 const onSetupVpn = profile => ({
   type: ACTIONS.SETUP_VPN,
@@ -59,6 +59,11 @@ const onDownload = id => ({
   type: ACTIONS.DOWNLOAD,
   payload: id,
 });
+const onSaveSetup = () => ({
+  type: ACTIONS.EDIT_PROFILE_SUBMIT,
+
+});
+
 export {
   vpnNameChange,
   vpnSelectorChange,
@@ -74,4 +79,5 @@ export {
   onProfileDelete,
   onSetupVpn,
   onDownload,
+  onSaveSetup,
 };

@@ -1,12 +1,10 @@
 import React from 'react';
 import './styles.css';
 import {
-  Icon,
   Divider,
   Input,
   Steps,
   Select,
-  message,
   Button,
   Form,
 } from 'antd';
@@ -42,21 +40,6 @@ class CreateNewPROXY extends React.Component {
     getServerList();
   }
 
-  next() {
-    const { name } = this.props.proxy;
-    const current = this.state.current + 1;
-
-    if (name.length < 2) {
-      this.setState({ error: 'error' });
-    } else {
-      this.setState({ current, error: '' });
-    }
-  }
-
-  prev() {
-    const current = this.state.current - 1;
-    this.setState({ current });
-  }
 
   handleInputFocus = () => {
     this.setState({ error: '' });
@@ -220,6 +203,22 @@ additionally
         return <div> NO data</div>;
     }
   };
+
+  next() {
+    const { name } = this.props.proxy;
+    const current = this.state.current + 1;
+
+    if (name.length < 2) {
+      this.setState({ error: 'error' });
+    } else {
+      this.setState({ current, error: '' });
+    }
+  }
+
+  prev() {
+    const current = this.state.current - 1;
+    this.setState({ current });
+  }
 
   render() {
     const { current, steps } = this.state;

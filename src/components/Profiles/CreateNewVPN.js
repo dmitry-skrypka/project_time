@@ -6,7 +6,6 @@ import {
   Input,
   Steps,
   Select,
-  message,
   Button,
   Form,
   Badge,
@@ -14,7 +13,7 @@ import {
 
 import { connect } from 'react-redux';
 import {
-  createVpn,
+  createVpn, onSaveSetup,
   vpnNameChange,
   vpnOsChange,
   vpnSelectorChange,
@@ -178,8 +177,11 @@ class CreateNewVPN extends React.Component {
   };
 
   handleSubmit = () => {
-    const { onSubmitProfile } = this.props;
-    onSubmitProfile();
+    const { onSubmitProfile, onSubmitNewSetup } = this.props;
+    const { mode } = this.props.vpn;
+    if (mode === 'create') {
+      onSubmitProfile();
+    } onSubmitNewSetup();
   };
 
   handleStepsContent = (current) => {
@@ -378,11 +380,11 @@ remaining]
                       </div>
                     </>
                   )}
-                  {proto !== 'ovpn' ? (
+                  {proto !== 'ovpn' && (
                     <div className="create_profile_port_description">
                       Protocol descr
                     </div>
-                  ) : null}
+                  )}
                 </div>
                 <div className="create_profile_servers">
                   Recommended servers:
@@ -489,6 +491,9 @@ const mapDispatchToProps = dispatch => ({
   },
   onSubmitProfile: () => {
     dispatch(createVpn());
+  },
+  onSubmitNewSetup: () => {
+    dispatch(onSaveSetup());
   },
 });
 const mapStateToProps = state => ({

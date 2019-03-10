@@ -1,7 +1,7 @@
 import {
-  call, put, select, all,
+  call, put, all,
 } from 'redux-saga/effects';
-import ping from 'web-pingjs';
+
 
 import appConsts from '../config/appConsts';
 import UserService from '../services/userServices';

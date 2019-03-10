@@ -197,7 +197,29 @@
   display: flex !important;
   justify-content: space-between !important;
 }
+.view_profile_tab_content_header {
+  font-size: 24px;
+  font-weight: 600;
+  padding-left: 5px;
+}
+.view_profile_tab_content_header_icon {
+  font-size: 24px;
+}
 
+.disable_switch.ant-switch-checked {
+  background-color: #ef5350;
+}
+
+.code_example_content {
+  font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  padding: 50px;
+  background-color: #fbfbfc !important;
+}
+.code_example_commented {
+  color: #998;
+  font-style: italic;
+}
 @media (max-width: 992px) {
   .create_profile_tab1_container {
     height: auto;
@@ -262,6 +284,7 @@
   padding-top: 5px !important;
   padding-bottom: 5px !important;
   height: 50px;
+  text-align: center;
 }
 .swap_options_ovpn {
   text-align: center;
@@ -301,6 +324,21 @@
   .profile_card_section {
     margin-bottom: 16px;
   }
+  .create_block_create_new {
+    display: none;
+  }
+  .ant-card-head-title {
+    display: none !important;
+  }
+  .ant-card-head-wrapper {
+    justify-content: center !important;
+  }
+  .view_profile_tab_content_header {
+    font-size: 18px;
+  }
+  .view_profile_tab_content_header_icon {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -327,6 +365,13 @@
   .view_profile_tab_connect_icon_wrapper i {
     font-size: 1.5em !important;
   }
+  .view_profile_services_content {
+    padding: 0;
+  }
+  .ant-table-tbody > tr > td,
+  .ant-table-thead > tr > th {
+    padding: 5px !important;
+  }
 }
 
 @media (max-width: 576px) {
@@ -344,13 +389,13 @@
   }
 }
 
-.view_profile_table_wrapper .ant-table-body{
+.view_profile_table_wrapper .ant-table-body {
   overflow: auto;
 }
 
 @media (max-width: 420px) {
   .view_profile_tab_connect_wrapper {
-  padding: 0 !important;
+    padding: 0 !important;
   }
 
   .view_profile_tab_connect {

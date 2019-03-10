@@ -1,7 +1,6 @@
 import React from 'react';
 
 function SockCard(props) {
-  console.log(props);
   return (
     <div className="profile_card_container">
       <div>LOGO</div>

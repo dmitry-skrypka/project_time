@@ -33,7 +33,7 @@ const userReducer = (state = initialState, action) => {
         subscriptions: action.payload.subscriptions,
       };
     case ACTIONS.USER_GET_SERVER_PING_DONE:
-      console.log(action.payload);
+
 
       return {
         ...state,

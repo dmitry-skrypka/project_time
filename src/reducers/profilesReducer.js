@@ -5,6 +5,7 @@ const { ACTIONS } = appConsts;
 const initialState = {
   selectedTab: '1',
   selectedProfileID: '',
+  selectedProfileType: '',
   selectedProfile: {
     client_soft: '',
     connect: null,
@@ -42,7 +43,8 @@ const profilesReducer = (state = initialState, action) => {
     case ACTIONS.PROFILE_SELECTED:
       return {
         ...state,
-        selectedProfileID: action.payload,
+        selectedProfileID: action.payload.id,
+        selectedProfileType: action.payload.type,
       };
 
     case ACTIONS.GET_PROFILE_INFO_DONE:
@@ -55,6 +57,7 @@ const profilesReducer = (state = initialState, action) => {
         ...state,
         selectedTab: action.payload.tab,
         selectedProfileID: action.payload.selectedProfileID,
+        selectedProfileType: action.payload.type,
       };
     default:
       return state;

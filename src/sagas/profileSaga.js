@@ -93,20 +93,58 @@ function* downloadConfig(action) {
     });
 
     const id = action.payload;
-    console.log(action.payload);
+
     const file = yield call(ProfileService.downloadConfigFile, id);
 
     yield put({
       type: ACTIONS.DOWNLOAD_DONE,
     });
-    console.log(file);
   } catch (e) {
     yield put({
       type: ACTIONS.DOWNLOAD_FAIL,
     });
   }
 }
+function* editProfile() {
+  try {
+    yield put({
+      type: ACTIONS.EDIT_PROFILE_SUBMIT_START,
+    });
+    const state = yield select();
+    const {
+      client, name, os, port, proto, subscription, server, id,
+    } = state.vpn;
+    const server_id = server;
+    const profile_id = id;
+    const editProfileResponse = yield call(
+      ProfileService.editProfile,
+      client,
+      name,
+      os,
+      port,
+      proto,
+      subscription,
+      server_id,
+      profile_id,
 
+    );
+
+    if (editProfileResponse.status === 200) {
+      message.success('Profile Updated');
+
+      history.push('/');
+    }
+    // yield put({
+    //   type: ACTIONS.CREATE_PROFILE_DONE,
+    //   payload: createProfileResponse,
+    //
+    // });
+  } catch (e) {
+    yield put({
+      type: ACTIONS.EDIT_PROFILE_SUBMIT_FAIL,
+    });
+  }
+}
 export {
-  createProfile, getProfileById, deleteProfileById, downloadConfig,
+  createProfile, getProfileById, deleteProfileById, downloadConfig, editProfile,
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import SockImg from '../img/socks5.png';
 
 const ShieldSvg = () => (
   <svg
@@ -81,6 +82,9 @@ const GlobeSvg = () => (
     />
   </svg>
 );
+
+const sockImg = () => <img style={{ width: 40, height: 40 }} src={SockImg} alt=":(" />;
+
 export {
-  ShieldSvg, MaskSvg, SecretSvg, GlobeSvg,
+  ShieldSvg, MaskSvg, SecretSvg, GlobeSvg, sockImg,
 };

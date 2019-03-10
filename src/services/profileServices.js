@@ -19,6 +19,23 @@ class ProfileService {
     });
   }
 
+  static editProfile(client, name, os, port, proto, subscription, server_id, profile_id) {
+    // axios.defaults.withCredentials = true;
+    return axios(`${appConsts.BACKEND_URL}/app/v1/profile/${profile_id}/`, {
+      method: 'POST',
+      withCredentials: true,
+      params: {
+        client,
+        name,
+        os,
+        port,
+        proto,
+        subscription,
+        server_id,
+      },
+    });
+  }
+
   static getProfile(id) {
     return axios(`${appConsts.BACKEND_URL}/app/v1/profile/${id}/`, {
       method: 'GET',

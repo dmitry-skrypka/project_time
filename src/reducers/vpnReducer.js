@@ -2,6 +2,7 @@ import appConsts from '../config/appConsts';
 
 const { ACTIONS } = appConsts;
 const initialState = {
+  mode: 'create',
   name: '',
   os: 'win',
   subscription: '1110',
@@ -9,6 +10,7 @@ const initialState = {
   proto: 'ovpn',
   port: '80',
   server: '',
+  id: '',
 };
 
 const vpnReducer = (state = initialState, action) => {
@@ -29,7 +31,6 @@ const vpnReducer = (state = initialState, action) => {
         ...action.payload,
       };
     case ACTIONS.SETUP_VPN:
-      console.log(action.payload);
       return {
         ...state,
         name: action.payload.name,
@@ -38,6 +39,13 @@ const vpnReducer = (state = initialState, action) => {
         client: action.payload.client,
         proto: action.payload.proto,
         port: action.payload.port,
+        mode: 'edit',
+        id: action.payload.id,
+      };
+    case ACTIONS.USER_GET_PROFILES_DONE:
+    case ACTIONS.USER_GET_PROFILES_FAIL:
+      return {
+        ...initialState,
       };
     default:
       return state;

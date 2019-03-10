@@ -23,7 +23,6 @@ class IpSection extends React.Component {
 
   popoverContent() {
     const { data } = this.props.user;
-    console.log(data);
     return (
       <div className="popover_container">
         <div className="popover_content_wrapper">

@@ -39,7 +39,7 @@ const SecretIcon = props => <Icon component={MaskSvg} {...props} />;
 
 const { TabPane } = Tabs;
 
-class ViewProfileBlock extends React.Component {
+class ViewVpnBlock extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -60,6 +60,7 @@ class ViewProfileBlock extends React.Component {
       client: selectedProfile.client_soft,
       proto: selectedProfile.proto,
       port: selectedProfile.port,
+      id: selectedProfileID,
     };
     function handleChange(value) {
       switch (value) {
@@ -103,7 +104,7 @@ class ViewProfileBlock extends React.Component {
         </Button>
         <div>
           {' '}
-          <Switch defaultChecked onChange={onChange} />
+          <Switch className="disable_switch" defaultChecked onChange={onChange} />
           {' '}
 Disable
         </div>
@@ -113,9 +114,9 @@ Disable
 
   // e[Object.keys(e)[0]]
   onTabChangeHandler = (activeKey) => {
-    const { selectedProfileID } = this.props.profiles;
+    const { selectedProfileID, selectedProfileType } = this.props.profiles;
     const { onTabChange } = this.props;
-    onTabChange({ tab: activeKey, selectedProfileID });
+    onTabChange({ tab: activeKey, selectedProfileID, type: selectedProfileType });
   };
 
   onChange = (pagination, filters, sorter) => {
@@ -230,9 +231,9 @@ Disable
     const {
       selectedProfile,
       selectedTab,
-      selectedProfileID,
+      selectedProfileType,
     } = this.props.profiles;
-    console.log(this.props);
+    console.log(selectedProfileType);
 
     const data = {
       labels: selectedProfile.histories.map(e => moment(Object.keys(e)[0]).format('MMM DD')),
@@ -263,7 +264,7 @@ Disable
             </Col>
             <Col span={8} offset={8}>
               <div className="profile_tag_container">
-                <Tags />
+                {/* <Tags /> */}
               </div>
             </Col>
           </Row>
@@ -281,6 +282,8 @@ Disable
                   <Row className="view_profile_tab_content_panel">
                     <Col span={18}>
                       <div className="view_profile_tab_connect_wrapper">
+
+                        {selectedProfileType === 'vpn' && (
                         <div
                           className="view_profile_tab_connect"
                           style={{
@@ -290,17 +293,58 @@ Disable
                           }}
                         >
                           <Icon
-                            style={{ fontSize: '24px' }}
+                            className="view_profile_tab_content_header_icon"
                             type={`${
                               selectedProfile.connect ? 'link' : 'disconnect'
                             }`}
                           />
-                          <span style={{ fontSize: '24px', fontWeight: 600 }}>
+                          <span className="view_profile_tab_content_header">
                             {selectedProfile.connect
                               ? 'Connected'
                               : 'Disconnected'}
                           </span>
                         </div>
+                        )}
+                        {selectedProfileType === 'proxy'
+                        && (
+                        <div
+                          className="view_profile_tab_connect"
+                          style={{
+                            backgroundColor: '#f8f9fa',
+                          }}
+                        >
+                          <Icon
+                            className="view_profile_tab_content_header_icon"
+                            type="global"
+                          />
+                          <span className="view_profile_tab_content_header">
+                            SOCKS5
+                          </span>
+                        </div>
+                        )
+
+                        }
+                        {selectedProfileType === 'shadowsock'
+                        && (
+                        <div
+                          className="view_profile_tab_connect"
+                          style={{
+                            backgroundColor: '#f8f9fa',
+                          }}
+                        >
+                          <Icon
+                            className="view_profile_tab_content_header_icon"
+                            type="global"
+                          />
+                          <span className="view_profile_tab_content_header">
+                            Shadowsock
+                          </span>
+                        </div>
+                        )
+
+                        }
+
+
                         <div className="view_profile_tab_connect_icons_block">
                           <div className="view_profile_tab_connect_icon_wrapper">
                             <Icon type="eye" style={{ fontSize: '3em' }} />
@@ -310,7 +354,7 @@ Disable
                           </div>
                           <div className="view_profile_tab_connect_icon_wrapper">
                             <Icon
-                              style={{ fontSize: '24px' }}
+                              className="view_profile_tab_content_header_icon"
                               type="arrow-right"
                             />
                           </div>
@@ -322,7 +366,7 @@ Disable
                           </div>
                           <div className="view_profile_tab_connect_icon_wrapper">
                             <Icon
-                              style={{ fontSize: '24px' }}
+                              className="view_profile_tab_content_header_icon"
                               type="arrow-right"
                             />
                           </div>
@@ -341,6 +385,7 @@ Disable
                             >
                               Connect
                             </Button>
+                            {selectedProfileType === 'vpn' && (
                             <Button
                               className="view_profile_tab_connect_button"
                               size="small"
@@ -348,6 +393,7 @@ Disable
                             >
                               Change IP
                             </Button>
+                            )}
                           </div>
                         </div>
                       </div>
@@ -358,7 +404,7 @@ Disable
                           className="view_profile_tab_connect"
                           style={{ backgroundColor: '#f8f9fa' }}
                         >
-                          <span style={{ fontSize: '24px', fontWeight: 600 }}>
+                          <span className="view_profile_tab_content_header">
                             Overview
                           </span>
                         </div>
@@ -370,34 +416,39 @@ Disable
                               {selectedProfile.online}
                             </span>
                           </div>
-                          <div className="view_profile_tab_overview_caption">
+                          {selectedProfileType === 'vpn' && (
+                          <>
+                            <div className="view_profile_tab_overview_caption">
                             Session:
-                            {' '}
-                            <span
-                              className="view_profile_badge"
-                              style={{
-                                color: '#fff',
-                                backgroundColor: selectedProfile.session
-                                  ? 'green'
-                                  : '#acacac',
-                              }}
-                            >
-                              {selectedProfile.session
-                                ? selectedProfile.session
-                                : 'Disconnected'}
-                            </span>
-                          </div>
-                          <div className="view_profile_tab_overview_caption">
+                              {' '}
+                              <span
+                                className="view_profile_badge"
+                                style={{
+                                  color: '#fff',
+                                  backgroundColor: selectedProfile.session
+                                    ? 'green'
+                                    : '#acacac',
+                                }}
+                              >
+                                {selectedProfile.session
+                                  ? selectedProfile.session
+                                  : 'Disconnected'}
+                              </span>
+                            </div>
+                            <div className="view_profile_tab_overview_caption">
                             Used last month:
-                            {' '}
-                            <span className="view_profile_badge badge_blue">
-                              {selectedProfile.online}
-                            </span>
-                          </div>
+                              {' '}
+                              <span className="view_profile_badge badge_blue">
+                                {selectedProfile.online}
+                              </span>
+                            </div>
+                          </>
+                          )}
                         </div>
                       </div>
                     </Col>
                   </Row>
+                  {selectedProfileType === 'vpn' && (
                   <Row>
                     <div className="chart_container">
                       <Bar
@@ -428,10 +479,13 @@ Disable
                       />
                     </div>
                   </Row>
+                  )}
                 </div>
               </div>
             </div>
           </TabPane>
+          {selectedProfileType === 'vpn'
+          && (
           <TabPane tab="Services" key="2">
             <div className="view_profile_tab_container">
               <div className="view_profile_tab_content">
@@ -440,9 +494,12 @@ Disable
                     className="view_profile_tab_connect"
                     style={{ backgroundColor: '#fbfbfc' }}
                   >
-                    <Icon style={{ fontSize: '24px' }} type="environment" />
+                    <Icon
+                      className="view_profile_tab_content_header_icon"
+                      type="environment"
+                    />
 
-                    <span style={{ fontSize: '24px', fontWeight: 600 }}>
+                    <span className="view_profile_tab_content_header">
                       IP Address
                     </span>
                     <span style={{ float: 'right', marginTop: '6px' }}>
@@ -471,7 +528,7 @@ Disable
                           />
                         </div>
                       </Col>
-                      <Col  lg={6} md={24}>
+                      <Col lg={6} md={24}>
                         <div className="view_profile_table_action_container">
                           <div className="view_profile_table_action_switch">
                             <Switch
@@ -495,16 +552,16 @@ Disable
                     className="view_profile_tab_connect"
                     style={{ backgroundColor: '#fbfbfc' }}
                   >
-                    <Icon style={{ fontSize: '24px' }} type="environment" />
-
-                    <span style={{ fontSize: '24px', fontWeight: 600 }}>
-                      PORT FORWARDING
+                    <Icon
+                      className="view_profile_tab_content_header_icon"
+                      type="gateway"
+                    />
+                    <span className="view_profile_tab_content_header">
+                      Port Forwarding
                     </span>
                     <span style={{ float: 'right', marginTop: '6px' }}>
                       <Button
-                        // disabled
                         size="small"
-                        // style={{ cursor: 'not-allowed' }}
                         type="primary"
                         htmlType="button"
                         onClick={() => console.log('ADD PORT')}
@@ -543,6 +600,7 @@ Disable
               </div>
             </div>
           </TabPane>
+          ) }
           <TabPane tab="Connect" key="3">
             <div className="view_profile_tab_container">
               <div className="view_profile_tab_content">
@@ -551,17 +609,31 @@ Disable
                     className="view_profile_tab_connect"
                     style={{ backgroundColor: '#fbfbfc' }}
                   >
-                    <Icon style={{ fontSize: '24px' }} type="environment" />
-
-                    <span style={{ fontSize: '24px', fontWeight: 600 }}>
+                    <Icon
+                      className="view_profile_tab_content_header_icon"
+                      type="info-circle"
+                    />
+                    {selectedProfileType === 'vpn' && (
+                    <span className="view_profile_tab_content_header">
                       VPN Account information
                     </span>
+                    )}
+                    {selectedProfileType === 'proxy' && (
+                    <span className="view_profile_tab_content_header">
+                      Proxy information
+                    </span>
+                    )}
+                    {selectedProfileType === 'shadowsock' && (
+                    <span className="view_profile_tab_content_header">
+                      Shadowsocks information
+                    </span>
+                    )}
                   </div>
                   <div>
                     <Row>
                       <Col xs={24} md={12} lg={12}>
                         <div className="view_actions_connect">
-                          {selectedProfile.protocol === 'ovpn' ? (
+                          {selectedProfile.protocol === 'OpenVPN' ? (
                             <div className="swap_options_ovpn">
                               <div>
                                 Download
@@ -617,18 +689,34 @@ OpenVPN config file
                                     </Text>
                                   </div>
                                 </div>
-                                <div className="swap_options_ikev_caption_section">
-                                  <div className="code_config_caption">
-                                    <span className="caption_title bold">
-                                      Remote ID
-                                    </span>
+                                {selectedProfile.protocol === 'iKEv2' && (
+                                  <div className="swap_options_ikev_caption_section">
+                                    <div className="code_config_caption">
+                                      <span className="caption_title bold">
+                                        Remote ID
+                                      </span>
+                                    </div>
+                                    <div className="code_config_caption taR">
+                                      <Text copyable code>
+                                        {selectedProfile.server.hostname}
+                                      </Text>
+                                    </div>
                                   </div>
-                                  <div className="code_config_caption taR">
-                                    <Text copyable code>
-                                      {selectedProfile.server.hostname}
-                                    </Text>
+                                )}
+                                {selectedProfile.protocol === 'L2TP' && (
+                                  <div className="swap_options_ikev_caption_section">
+                                    <div className="code_config_caption">
+                                      <span className="caption_title bold">
+                                        Secret
+                                      </span>
+                                    </div>
+                                    <div className="code_config_caption taR">
+                                      <Text copyable code>
+                                        secret
+                                      </Text>
+                                    </div>
                                   </div>
-                                </div>
+                                )}
                               </div>
                             </div>
                           )}
@@ -636,6 +724,7 @@ OpenVPN config file
                       </Col>
                       <Col xs={24} md={12} lg={12}>
                         <div className="view_profile_tab_connect_captions">
+                          {selectedProfileType === 'vpn' && (
                           <div className="view_profile_tab_connect_caption_section">
                             <span className="caption_title bold">OS:</span>
                             {' '}
@@ -643,6 +732,7 @@ OpenVPN config file
                               {selectedProfile.os}
                             </span>
                           </div>
+                          )}
                           <div className="view_profile_tab_connect_caption_section">
                             <span className="caption_title bold">Server:</span>
                             {' '}
@@ -655,7 +745,7 @@ OpenVPN config file
                               Protocol:
                             </span>
                             {' '}
-                            {selectedProfile.protocol === 'ovpn' ? (
+                            {selectedProfile.protocol === 'OpenVPN' ? (
                               <span className="caption_title">
                                 {selectedProfile.port === 53
                                   ? `${selectedProfile.protocol} UDP ${
@@ -671,7 +761,7 @@ OpenVPN config file
                               </span>
                             )}
                           </div>
-                          {selectedProfile.protocol === 'ovpn' ? (
+                          {selectedProfile.protocol === 'OpenVPN' && (
                             <div className="view_profile_tab_connect_caption_section">
                               <span className="caption_title bold">
                                 Client:
@@ -681,10 +771,45 @@ OpenVPN config file
                                 {selectedProfile.client_soft}
                               </span>
                             </div>
-                          ) : null}
+                          ) }
+                          {selectedProfileType === 'proxy'
+                          && (
+                          <div className="view_profile_tab_connect_caption_section">
+                            <span className="caption_title bold">
+                                Ports:
+                            </span>
+                            {' '}
+                            <span className="caption_title">
+                              {selectedProfile.port}
+                            </span>
+                          </div>
+                          )
+                          }
                         </div>
                       </Col>
                     </Row>
+                    <div className="code_example_content">
+                      <div>
+                        <span className="code_example_commented"># Example of use:</span>
+                        <div style={{ color: '#333' }}>
+curl --socks5
+                          {' '}
+                          {selectedProfile.server.hostname}
+:
+                          {selectedProfile.port}
+                          {' '}
+-U
+                          {' '}
+                          {selectedProfile.username}
+:
+                          {selectedProfile.password}
+                          {' '}
+ifconfig.co
+                          {' '}
+                          {selectedProfile.server.ip}
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -720,4 +845,4 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(ViewProfileBlock);
+)(ViewVpnBlock);

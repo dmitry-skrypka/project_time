@@ -1,4 +1,4 @@
-import { takeLatest, takeEvery, take } from 'redux-saga/effects';
+import { takeEvery } from 'redux-saga/effects';
 
 import AppConsts from '../config/appConsts';
 import {
@@ -12,7 +12,7 @@ import {
   createProfile,
   deleteProfileById,
   getProfileById,
-  downloadConfig,
+  downloadConfig, editProfile,
 } from './profileSaga';
 
 const { ACTIONS } = AppConsts;
@@ -27,4 +27,5 @@ export default function* () {
   yield takeEvery([ACTIONS.GET_PROFILE_INFO], getProfileById);
   yield takeEvery([ACTIONS.DELETE_PROFILE], deleteProfileById);
   yield takeEvery([ACTIONS.DOWNLOAD], downloadConfig);
+  yield takeEvery([ACTIONS.EDIT_PROFILE_SUBMIT], editProfile);
 }

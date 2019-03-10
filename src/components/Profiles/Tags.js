@@ -2,13 +2,26 @@ import React from 'react';
 import {
   Tag, Input, Tooltip, Icon,
 } from 'antd';
+import { connect } from 'react-redux';
+import {
+  getProfileInfo,
+} from '../../actions/profilesActions';
 
 class EditableTagGroup extends React.Component {
-  state = {
-    tags: ['Unremovable', 'Tag 2', 'Tag 3'],
-    inputVisible: false,
-    inputValue: '',
-  };
+  constructor(props) {
+    super(props);
+    const { tags } = props.profile;
+    this.state = {
+      tags: JSON.parse(tags),
+      inputVisible: false,
+      inputValue: '',
+    };
+  }
+
+  componentDidMount() {
+    // const { tags } = this.props.profile;
+
+  }
 
   handleClose = (removedTag) => {
     const tags = this.state.tags.filter(tag => tag !== removedTag);
@@ -30,7 +43,7 @@ class EditableTagGroup extends React.Component {
     if (inputValue && tags.indexOf(inputValue) === -1) {
       tags = [...tags, inputValue];
     }
-    console.log(tags);
+
     this.setState({
       tags,
       inputVisible: false,
@@ -42,6 +55,8 @@ class EditableTagGroup extends React.Component {
 
   render() {
     const { tags, inputVisible, inputValue } = this.state;
+
+
     return (
       <div>
         {tags.map((tag, index) => {
@@ -49,7 +64,7 @@ class EditableTagGroup extends React.Component {
           const tagElem = (
             <Tag
               key={tag}
-              closable={index !== 0}
+              closable
               afterClose={() => this.handleClose(tag)}
             >
               {isLongTag ? `${tag.slice(0, 20)}...` : tag}
@@ -89,4 +104,18 @@ New Tag
     );
   }
 }
-export default EditableTagGroup;
+
+const mapDispatchToProps = dispatch => ({
+  getProfile: (id) => {
+    dispatch(getProfileInfo(id));
+  },
+
+});
+const mapStateToProps = state => ({
+  profile: state.profiles.selectedProfile,
+
+});
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(EditableTagGroup);
