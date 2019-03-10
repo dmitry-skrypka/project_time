@@ -343,3 +343,17 @@
     transform: rotateZ(90deg);
   }
 }
+
+.view_profile_table_wrapper .ant-table-body{
+  overflow: auto;
+}
+
+@media (max-width: 420px) {
+  .view_profile_tab_connect_wrapper {
+  padding: 0 !important;
+  }
+
+  .view_profile_tab_connect {
+    margin-bottom: 12px;
+  }
+}

@@ -445,7 +445,7 @@ Disable
                     <span style={{ fontSize: '24px', fontWeight: 600 }}>
                       IP Address
                     </span>
-                    <span style={{ float: 'right' }}>
+                    <span style={{ float: 'right', marginTop: '6px' }}>
                       <Button
                         disabled
                         size="small"
@@ -459,7 +459,7 @@ Disable
                   </div>
                   <div className="view_profile_services_content">
                     <Row>
-                      <Col span={18}>
+                      <Col lg={18} md={24}>
                         <div className="view_profile_table_wrapper">
                           <Table
                             columns={this.renderIpTableColumns()}
@@ -471,7 +471,7 @@ Disable
                           />
                         </div>
                       </Col>
-                      <Col span={6}>
+                      <Col  lg={6} md={24}>
                         <div className="view_profile_table_action_container">
                           <div className="view_profile_table_action_switch">
                             <Switch
@@ -500,7 +500,7 @@ Disable
                     <span style={{ fontSize: '24px', fontWeight: 600 }}>
                       PORT FORWARDING
                     </span>
-                    <span style={{ float: 'right' }}>
+                    <span style={{ float: 'right', marginTop: '6px' }}>
                       <Button
                         // disabled
                         size="small"
@@ -515,7 +515,7 @@ Disable
                   </div>
                   <div className="view_profile_services_content">
                     <Row>
-                      <Col span={18}>
+                      <Col lg={18} md={24}>
                         <div className="view_profile_table_wrapper">
                           <Table
                             columns={this.renderPortTableColumns()}
@@ -527,7 +527,7 @@ Disable
                           />
                         </div>
                       </Col>
-                      <Col span={6}>
+                      <Col lg={6} md={24}>
                         <div className="view_profile_table_action_container">
                           <div className="view_profile_services_caption">
                             Port forwarding allows remote computers (for
@@ -559,7 +559,7 @@ Disable
                   </div>
                   <div>
                     <Row>
-                      <Col span={12}>
+                      <Col xs={24} md={12} lg={12}>
                         <div className="view_actions_connect">
                           {selectedProfile.protocol === 'ovpn' ? (
                             <div className="swap_options_ovpn">
@@ -634,7 +634,7 @@ OpenVPN config file
                           )}
                         </div>
                       </Col>
-                      <Col span={12}>
+                      <Col xs={24} md={12} lg={12}>
                         <div className="view_profile_tab_connect_captions">
                           <div className="view_profile_tab_connect_caption_section">
                             <span className="caption_title bold">OS:</span>

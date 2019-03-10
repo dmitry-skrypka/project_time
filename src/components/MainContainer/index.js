@@ -36,7 +36,7 @@ class MainContainer extends React.Component {
               </Switch>
             </Router>
           </Content>
-          <Footer style={{ position: 'fixed', width: '100%', bottom: 0 }}>
+          <Footer style={{ position: 'fixed', width: '100%', bottom: 0, zIndex: 999, }}>
             <span>timeVPN</span>
             {' '}
 © 2018-19
